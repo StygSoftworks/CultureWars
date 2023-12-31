@@ -23,6 +23,9 @@ const Layout = ({ children }) => {
                 <li>
                 <Link href="/createcard">Create Card</Link>
                 </li>
+                <li>
+                <Link href="/rules">Rules</Link>
+                </li>
 
               {/* Add more navigation links here */}
             </ul>
