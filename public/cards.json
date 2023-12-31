@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Sarcastic Hero",
+    "type": "Character",
+    "subtype": "Hero",
+    "cost": 4,
+    "attack": 3,
+    "defense": 2,
+    "description": "A snarky hero who always has a witty retort.",
+    "abilities": [
+      "Sarcasm Strike: When attacking, you may deduct 2 Sarcasm Tokens from your opponent.",
+      "Quick Wit: Can respond to any event card immediately."
+    ],
+    "image": "https://th.bing.com/th/id/OIG.iSM2XLM4UDI2dsUFW_lb?w=1024&h=1024&rs=1&pid=ImgDetMain"
+  },
+  {
+    "name": "Overpriced Latte",
+    "type": "Artifact",
+    "subtype": "Consumer Trap",
+    "cost": 4,
+    "description": "A latte so expensive it defies logic.",
+    "abilities": [
+      "Caffeine Boost: Gain 2 Sarcasm Tokens and +2 attack for each turn you've been awake.",
+      "Hipster Shield: Opponent's attacks have a 50% chance to miss."
+    ],
+    "image": "https://picsum.photos/200"
+  },
+  {
+    "name": "Epic Fail",
+    "type": "Event",
+    "subtype": "Hilarious Misfortune",
+    "cost": 1,
+    "description": "A moment of sheer incompetence that leaves everyone laughing.",
+    "abilities": [
+      "Ripple of Laughter: All players draw an extra card.",
+      "Laughing Fit: You gain 1 Sarcasm Token for each player's laughter."
+    ],
+    "image": "https://th.bing.com/th/id/OIG.ZLQrAiSevma9jYaE1aaU?pid=ImgGn"
+  },
+  {
+    "name": "Dank Meme",
+    "type": "Event",
+    "subtype": "Internet Phenomenon",
+    "cost": 2,
+    "description": "A meme so dank that it breaks the internet.",
+    "abilities": [
+      "Internet Breaker: All players lose 2 Sarcasm Tokens.",
+      "Spread the Dankness: You may play another meme card immediately."
+    ],
+    "image": "https://picsum.photos/200"
+  },
+  {
+    "name": "Meme Master",
+    "type": "Character",
+    "subtype": "Internet Sensation",
+    "cost": 5,
+    "attack": 2,
+    "defense": 3,
+    "description": "The ultimate meme creator who can make anyone laugh or cringe.",
+    "abilities": [
+      "Meme Generator: Once per turn, create a random meme card and play it immediately.",
+      "Viral Impact: Opponent's defense is reduced by 1 for every meme card in play."
+    ],
+    "image": "https://picsum.photos/200"
+  },
+  {
+    "name": "TestCardForInput",
+    "type": "doesthisstore?",
+    "subtype": "???",
+    "cost": "0",
+    "attack": "69",
+    "defense": "1337",
+    "description": "this is a test",
+    "abilities": [
+      "test1",
+      "test2"
+    ],
+    "image": "https://picsum.photos/200"
+  }
+]
