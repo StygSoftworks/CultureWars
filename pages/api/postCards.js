@@ -1,7 +1,13 @@
 // pages/api/postCards.js
-
-import { Console } from 'console';
 import fetch from 'node-fetch'; // Import the 'node-fetch' library for server-side fetch
+
+const fetcher = async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    return response.json();
+  };
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -10,19 +16,19 @@ export default async function handler(req, res) {
 
   try {
     const githubApiKey = process.env.GITHUB_API_token;
-    
-    //console.log(githubApiKey);
-
+    const oldCards =  await fetch(process.env.GITHUB_RAW_URL);
+    const dataOldCards = await oldCards.json();
     const { newCardData } = req.body; // Expecting a JSON object with new card data
 
-    //console.log(newCardData);
-    // Perform your data processing here using newCardData
-
     // Example: Add the new card data to an array
-    const jsonData = []; // You should replace this with your actual data source
-    jsonData.push(newCardData);
 
-    //console.log(process.env.GITHUB_CARD_API_REPO);
+    dataOldCards.push(newCardData);
+
+    const jsonData = [];
+    jsonData.push(dataOldCards);
+
+    //console.log('jsonData', jsonData);
+
 
     // Get the SHA of the existing file
     const fileResponse = await fetch(process.env.GITHUB_CARD_API_REPO, {
@@ -32,8 +38,6 @@ export default async function handler(req, res) {
       },
     });
     const fileData = await fileResponse.json();
-
-    //console.log(fileData);
 
     const sha = fileData.sha;
 
