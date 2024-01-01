@@ -20,15 +20,7 @@ export default async function handler(req, res) {
     const dataOldCards = await oldCards.json();
     const { newCardData } = req.body; // Expecting a JSON object with new card data
 
-    // Example: Add the new card data to an array
-
     dataOldCards.push(newCardData);
-
-    const jsonData = [];
-    jsonData.push(dataOldCards);
-
-    //console.log('jsonData', jsonData);
-
 
     // Get the SHA of the existing file
     const fileResponse = await fetch(process.env.GITHUB_CARD_API_REPO, {
@@ -46,7 +38,7 @@ export default async function handler(req, res) {
       method: 'PUT',
       body: JSON.stringify({
         message: "Update cards.json",
-        content: btoa(JSON.stringify(jsonData)), // Base64 encode the JSON data
+        content: btoa(JSON.stringify(dataOldCards)), // Base64 encode the JSON data
         sha: sha,
       }),
       headers: {
