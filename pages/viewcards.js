@@ -15,7 +15,9 @@ const fetcher = async (url) => {
 
 const ViewCards = () => {
 
-  const { data: jsonData, error } = useSWR('/api/getCards', fetcher);
+  const { data: jsonData, error } = useSWR('/api/getCards', fetcher, {
+    refreshInterval: 10000, // Refresh every 30 seconds (adjust as needed)
+  });
   //const { jsonData, isLoading, error } = GetCards();
 
   console.log(jsonData);
