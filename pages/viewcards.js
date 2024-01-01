@@ -49,7 +49,7 @@ const ViewCards = () => {
                   <td className="p-1">
                       {/* Use Link to navigate to the CardDetail page */}
                       <Link href={`/card/${card.guid}`  }>
-                      <span className='text-blue-500 hover:underline cursor-pointer'>{card.name} </span>
+                        <span className='text-blue-500 hover:underline cursor-pointer'>{card.name} </span>
                       </Link>
                     </td>
                   <td className="p-1">{card.type}</td>
