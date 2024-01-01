@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const url = 'https://raw.githubusercontent.com/StygSoftworks/cwarsJson/main/cards.json';
+const url = process.env.github_card_api_repo;
 
 function GetCards() {
   const [jsonData, setJsonData] = useState([]);

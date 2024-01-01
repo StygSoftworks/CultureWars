@@ -5,8 +5,6 @@ import Layout from '../components/Layout';
 import Image from 'next/image';
 import useSWR from 'swr';
 
-
-
 const fetcher = async (url) => {
   const response = await fetch(url);
   if (!response.ok) {

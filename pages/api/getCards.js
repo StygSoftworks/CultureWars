@@ -1,4 +1,4 @@
-const urlDataJson = 'https://raw.githubusercontent.com/StygSoftworks/cwarsJson/main/cards.json';
+const urlDataJson = process.env.github_card_json_url;
 
 export default async (req, res) => {
   try {

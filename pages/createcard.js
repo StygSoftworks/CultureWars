@@ -27,13 +27,7 @@ const CreateCard = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-
-    const githubApiKey = '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'
-
-    // Ensure cardData is valid before proceeding
-    // (Add validation as needed)
-  
+    const githubApiKey = process.env.github_API_token;
     const abilitiesArray = cardData.abilities.split('\n').map(ability => ability.trim());
     const updatedCardData = { ...cardData, abilities: abilitiesArray };
   
@@ -47,7 +41,7 @@ const CreateCard = () => {
   
     try {
       // Get the SHA of the existing file
-      const fileResponse = await fetch(`https://api.github.com/repos/StygSoftworks/cwarsJson/contents/cards.json`, {
+      const fileResponse = await fetch(process.env.github_card_api_repo, {
         headers: {
           'Authorization': `Bearer ${githubApiKey}`,
           'Content-Type': 'application/json',
@@ -57,7 +51,7 @@ const CreateCard = () => {
       const sha = fileData.sha;
 
       // Update the file in the repository
-      const updateResponse = await fetch(`https://api.github.com/repos/StygSoftworks/cwarsJson/contents/cards.json`, {
+      const updateResponse = await fetch(process.env.github_card_api_repo, {
         method: 'PUT',
         body: JSON.stringify({
           message: "Update cards.json",
