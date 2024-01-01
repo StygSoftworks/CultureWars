@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import Image from 'next/image';
 import useSWR from 'swr';
+import Link from 'next/link';
 
 const fetcher = async (url) => {
   const response = await fetch(url);
@@ -16,11 +17,8 @@ const fetcher = async (url) => {
 const ViewCards = () => {
 
   const { data: jsonData, error } = useSWR('/api/getCards', fetcher, {
-    refreshInterval: 10000, // Refresh every 30 seconds (adjust as needed)
+    refreshInterval: 10000, // Refresh every 10 seconds (adjust as needed)
   });
-  //const { jsonData, isLoading, error } = GetCards();
-
-  console.log(jsonData);
 
   if (error) {
     return <div>Error loading data...</div>;
@@ -48,7 +46,12 @@ const ViewCards = () => {
               
               {jsonData && jsonData.map((card, index) => (
                 <tr key={index}>
-                  <td className="p-1">{card.name}</td>
+                  <td className="p-1">
+                      {/* Use Link to navigate to the CardDetail page */}
+                      <Link href={`/card/${card.guid}`  }>
+                      <span className='text-blue-500 hover:underline cursor-pointer'>{card.name} </span>
+                      </Link>
+                    </td>
                   <td className="p-1">{card.type}</td>
                   <td className="p-1 hidden md:table-cell">{card.subtype}</td>
                   <td className="p-1">{card.cost}</td>

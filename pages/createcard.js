@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import useSWR from 'swr';
-
+import { v4 as uuidv4 } from 'uuid';
 
 // Function to send new card data to the API
 async function postNewCardData(newCardData) {
@@ -32,12 +31,13 @@ const CreateCard = () => {
     name: '',
     type: '',
     subtype: '',
-    cost: '',
-    attack: '',
-    defense: '',
+    cost: 0,
+    attack: 0,
+    defense: 0,
     description: '',
     abilities: '',
     image: '',
+    guid: uuidv4(),
   });
 
   const handleChange = (e) => {
@@ -48,8 +48,6 @@ const CreateCard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await postNewCardData(cardData);
-
-
 
     //if the card is created successfully, reset the form and make a success alert
     setCardData({
@@ -62,8 +60,12 @@ const CreateCard = () => {
       description: '',
       abilities: '',
       image: '',
+      guid: uuidv4(),
     });
-    alert('Card created successfully!');
+    //alert('Card created successfully!');
+
+    //navigate back to the view cards page
+    window.location.href = '/viewcards';
   
   };
 
@@ -141,8 +143,6 @@ const CreateCard = () => {
             className="w-full border rounded-md p-2"
           />
         </div>
-
-
 
         <div>
           <label className="block font-semibold">Image URL:</label>
