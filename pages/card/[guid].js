@@ -1,10 +1,8 @@
 import Layout from '../../components/Layout';
-
+import React from 'react';
+import { toPng } from 'html-to-image';
 // Function to fetch data. This can be outside the component.
 const fetchCardData = async (guid) => {
-  //console.log(`/api/getCardByGuid?guid=${guid}`);
-  //console.log(guid);
-
   const urlDataJson = `${process.env.BASE_URL}/api/getCardByGuid?guid=${guid}`;
   console.log(urlDataJson);
 
@@ -19,6 +17,29 @@ const fetchCardData = async (guid) => {
 
 
 const CardDetail = ({ cardData, error }) => {
+
+
+    // Function to handle the export
+    const exportToPng = async () => {
+      try {
+        const cardElement = document.getElementById('card-element');
+
+        //set the background color to white (default is transparent)
+        cardElement.style.backgroundColor = 'white';
+
+        const dataUrl = await toPng(cardElement);
+  
+        // Creating a link to trigger download
+        const link = document.createElement('a');
+        link.download = `${cardData.name.replace(/\s/g, '-')}.png`;
+        link.href = dataUrl;
+        link.click();
+      } catch (err) {
+        console.error('oops, something went wrong!', err);
+      }
+    };
+
+
   if (error) {
     console.error(error);
     return <div>{error}</div>;
@@ -31,46 +52,73 @@ const CardDetail = ({ cardData, error }) => {
   // Render your card details here
   return (
     <Layout>
-    <div className="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg mx-auto mt-10">
-      <img src={cardData.image} alt={cardData.name} className="w-full" />
+<div id="card-element" className="max-w-lg  card-element ">
+  <img src={cardData.image} alt={cardData.name} className="w-full h-64 object-cover" />
 
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{cardData.name}</div>
-        <p className="text-gray-700 text-base">{cardData.description}</p>
-      </div>
+  <div className="p-6">
+    <h2 className="font-bold text-2xl mb-2 text-gray-800">{cardData.name}</h2>
+    <p className="text-gray-700 text-base mb-4">{cardData.description}</p>
 
-      <div className="px-6 py-4">
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-          Type: {cardData.type}
-        </span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-          Subtype: {cardData.subtype}
-        </span>
-      </div>
-
-      <div className="px-6 py-4">
-        <span className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-green-800 mr-2">
-          Attack: {cardData.attack}
-        </span>
-        <span className="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-red-800 mr-2">
-          Defense: {cardData.defense}
-        </span>
-        <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-blue-800 mr-2">
-          Cost: {cardData.cost}
-        </span>
-      </div>
-
-      <div className="px-6 py-4">
-        <p className="text-gray-700 text-base">
-          Abilities:
-        </p>
-        <ul className="list-disc ml-6">
-          {cardData.abilities.map((ability, index) => (
-            <li key={index} className="text-gray-600">{ability}</li>
-          ))}
-        </ul>
-      </div>
+    <div className="flex flex-wrap justify-start mb-4">
+      <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-1">
+        Type: {cardData.type}
+      </span>
+      <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-1">
+        Subtype: {cardData.subtype}
+      </span>
     </div>
+
+    <div className="flex flex-wrap justify-start mb-4">
+      <span className="bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-green-800 m-1">
+        Attack: {cardData.attack}
+      </span>
+      <span className="bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-red-800 m-1">
+        Defense: {cardData.defense}
+      </span>
+      <span className="bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-blue-800 m-1">
+        Cost: {cardData.cost}
+      </span>
+    </div>
+
+    <div>
+      <p className="text-gray-700 text-base mb-2">
+        Abilities:
+      </p>
+      <ul className="list-disc ml-6 text-gray-600">
+        {cardData.abilities.map((ability, index) => (
+          <li key={index}>{ability}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</div>
+{/* Export Button */}
+<div className="text-center mt-4">
+        <button onClick={exportToPng} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Export as PNG
+        </button>
+      </div>
+
+
+
+      <style jsx>{`
+/* Adjusted CSS class for PNG export */
+.card-element {
+  max-width: m; /* Adjust the width as needed */
+  background-color: white;
+  border-radius: 0.5rem; /* rounded-lg equivalent */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg equivalent */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem; /* mt-10 equivalent */
+  transition: none; /* Disabling transitions for export */
+  transform: none; /* Disabling transform on hover */
+}
+
+
+`}</style>
+
+
     </Layout>
   );
 };
@@ -84,6 +132,8 @@ export const getServerSideProps = async (context) => {
     return { props: { error: error.message } };
   }
 };
+
+
 
 
 export default CardDetail;
