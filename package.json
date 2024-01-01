@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "axios": "^1.6.3",
     "html-to-image": "^1.11.11",
     "next": "14.0.4",

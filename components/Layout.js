@@ -2,9 +2,28 @@
 
 import React from 'react';
 import Link from 'next/link';
-
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownSection,
+  DropdownItem
+} from "@nextui-org/react";
 
 const Layout = ({ children }) => {
+
+  //get all the avatars from the public/json/avatars.json file
+  const avatars = require('../public/json/avatars.json');
+
+  //get a list of all the distinct names and ids
+  const avatarList = avatars.map((avatar) => {
+    return {
+      id: avatar.id,
+      name: avatar.name,
+    };
+  });
+
+
   return (
     <div>
       <nav className="navbar">
@@ -26,6 +45,46 @@ const Layout = ({ children }) => {
                 <li>
                 <Link href="/rules">Rules</Link>
                 </li>
+
+                {/* <li className="relative group">
+  <a href="#" className="text-gray-600 group-hover:text-gray-900">
+    Avatars
+  </a>
+  <ul className="absolute hidden mt-2 space-y-2 bg-white border border-gray-300 rounded-lg group-hover:block">
+    {avatarList.map((avatar) => (
+      <li key={avatar.id}>
+        <Link href={`/avatars/${avatar.id}`} className="block px-4 py-2 hover:bg-gray-100">
+          {avatar.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</li> */}
+
+                <Dropdown>
+
+  <DropdownTrigger>
+    <a href="#" className="text-gray-600 group-hover:text-gray-900">
+      Avatars
+    </a>
+  </DropdownTrigger>
+
+  <DropdownMenu>
+    <DropdownSection>
+      {avatarList.map((avatar) => (
+        <DropdownItem key={avatar.id}>
+          <Link href={`/avatars/${avatar.id}`} className="block px-4 py-2 hover:bg-gray-100">
+            {avatar.name}
+          </Link>
+        </DropdownItem>
+      ))}
+    </DropdownSection>
+  </DropdownMenu>
+  
+                </Dropdown>
+
+
+
 
               {/* Add more navigation links here */}
             </ul>
@@ -74,6 +133,8 @@ const Layout = ({ children }) => {
         .navbar-menu a:hover {
           text-decoration: underline;
         }
+
+        
       `}</style>
     </div>
   );
