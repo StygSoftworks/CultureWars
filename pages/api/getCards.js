@@ -1,4 +1,4 @@
-const urlDataJson = process.env.github_card_json_url;
+const urlDataJson = process.env.GITHUB_RAW_URL;
 
 export default async (req, res) => {
   try {

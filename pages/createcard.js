@@ -3,20 +3,31 @@ import Layout from '../components/Layout';
 import useSWR from 'swr';
 
 
-const fetcher = async (url) => {
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error('Failed to fetch data');
+// Function to send new card data to the API
+async function postNewCardData(newCardData) {
+  try {
+    const response = await fetch('/api/postCards', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ newCardData }), // Send the new card data as a JSON object
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data.message); // Success message from the API
+    } else {
+      const errorData = await response.json();
+      console.error(errorData.error); // Error message from the API
+    }
+  } catch (error) {
+    console.error('Error sending new card data:', error);
   }
-  return response.json();
-};
+}
 
 
 const CreateCard = () => {
-
-  
-  const { data: jsonData, error } = useSWR('/api/getCards', fetcher);
-
   const [cardData, setCardData] = useState({
     name: '',
     type: '',
@@ -34,56 +45,26 @@ const CreateCard = () => {
     setCardData({ ...cardData, [name]: value });
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const githubApiKey = process.env.github_API_token;
-    const abilitiesArray = cardData.abilities.split('\n').map(ability => ability.trim());
-    const updatedCardData = { ...cardData, abilities: abilitiesArray };
-  
-    // Check for loading state
-    if (isLoading) {
-      return <div>Loading...</div>;
-    }
-  
-    // Add the new card data to jsonData
-    const newJsonData = [...jsonData, updatedCardData];
-  
-    try {
-      // Get the SHA of the existing file
-      const fileResponse = await fetch(process.env.github_card_api_repo, {
-        headers: {
-          'Authorization': `Bearer ${githubApiKey}`,
-          'Content-Type': 'application/json',
-        },
-      });
-      const fileData = await fileResponse.json();
-      const sha = fileData.sha;
+    await postNewCardData(cardData);
 
-      // Update the file in the repository
-      const updateResponse = await fetch(process.env.github_card_json_url, {
-        method: 'PUT',
-        body: JSON.stringify({
-          message: "Update cards.json",
-          content: btoa(JSON.stringify(newJsonData)), // Base64 encode the JSON data
-          sha: sha,
-        }),
-        headers: {
-          'Authorization': `Bearer ${githubApiKey}`,
-          'Content-Type': 'application/json',
-        },
-      });
+
+
+    //if the card is created successfully, reset the form and make a success alert
+    setCardData({
+      name: '',
+      type: '',
+      subtype: '',
+      cost: '',
+      attack: '',
+      defense: '',
+      description: '',
+      abilities: '',
+      image: '',
+    });
+    alert('Card created successfully!');
   
-      const updateData = await updateResponse.json();
-  
-      if (updateResponse.ok) {
-        console.log('Card data saved successfully.', updateData);
-      } else {
-        console.error('Error saving card data.', updateData);
-      }
-    } catch (error) {
-      console.error('Error in updating the file:', error);
-    }
   };
 
   return (
