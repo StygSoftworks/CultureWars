@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import axios from 'axios';
-import { typescript } from '@/next.config';
+import GetCards from '../components/GetCards';
 
 const CreateCard = () => {
+
+  
+  const { jsonData, isLoading, error } = GetCards();
+
   const [cardData, setCardData] = useState({
     name: '',
     type: '',
@@ -21,45 +24,64 @@ const CreateCard = () => {
     setCardData({ ...cardData, [name]: value });
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
 
-    // Split abilities input into an array by new lines
-    const abilitiesArray = cardData.abilities.split('\n').map((ability) => ability.trim());
+    const githubApiKey = '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'
 
-    // Updated card data with abilities as an array
-    const updatedCardData = {
-      ...cardData,
-      abilities: abilitiesArray,
-    };
-
-    // Handle card creation here with updatedCardData
-    console.log('Card data:', updatedCardData);
-
-    try {
-        const response = await fetch('/api/createCard', {
-            method: 'POST',
-            body: JSON.stringify(updatedCardData),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if(response.ok) {
-            console.log('Card data saved successfully.');
-        } else {
-            console.error('Error saving card data.');
-        }
-
-    } catch (error) {
-        console.error('Error saving card data:', error);
+    // Ensure cardData is valid before proceeding
+    // (Add validation as needed)
+  
+    const abilitiesArray = cardData.abilities.split('\n').map(ability => ability.trim());
+    const updatedCardData = { ...cardData, abilities: abilitiesArray };
+  
+    // Check for loading state
+    if (isLoading) {
+      return <div>Loading...</div>;
     }
+  
+    // Add the new card data to jsonData
+    const newJsonData = [...jsonData, updatedCardData];
+  
+    try {
+      // Get the SHA of the existing file
+      const fileResponse = await fetch(`https://api.github.com/repos/StygSoftworks/cwarsJson/contents/cards.json`, {
+        headers: {
+          'Authorization': `Bearer ${githubApiKey}`,
+          'Content-Type': 'application/json',
+        },
+      });
+      const fileData = await fileResponse.json();
+      const sha = fileData.sha;
 
-
-
-
-
+      // Update the file in the repository
+      const updateResponse = await fetch(`https://api.github.com/repos/StygSoftworks/cwarsJson/contents/cards.json`, {
+        method: 'PUT',
+        body: JSON.stringify({
+          message: "Update cards.json",
+          content: btoa(JSON.stringify(newJsonData)), // Base64 encode the JSON data
+          sha: sha,
+        }),
+        headers: {
+          'Authorization': `Bearer ${githubApiKey}`,
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      const updateData = await updateResponse.json();
+  
+      if (updateResponse.ok) {
+        console.log('Card data saved successfully.', updateData);
+      } else {
+        console.error('Error saving card data.', updateData);
+      }
+    } catch (error) {
+      console.error('Error in updating the file:', error);
+    }
   };
+
   return (
     <Layout>
       <h1 className="text-1x2 font-bold mb-4">Create New Card</h1>

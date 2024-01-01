@@ -3,22 +3,28 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import Image from 'next/image';
+import useSWR from 'swr';
+
+
+
+const fetcher = async (url) => {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  return response.json();
+};
 
 const ViewCards = () => {
-  const [cardData, setCardData] = useState([]);
-  
-  useEffect(() => {
-    //get the card data from the public/cards.json file
-    fetch('/cards.json')
-        .then((response) => response.json())
-        .then((data) => {
-            setCardData(data);
-        })
-        .catch((error) => {
-            console.error('Error fetching card data:', error);
-        });
 
-  }, []);
+  const { data: jsonData, error } = useSWR('/api/getCards', fetcher);
+  //const { jsonData, isLoading, error } = GetCards();
+
+  console.log(jsonData);
+
+  if (error) {
+    return <div>Error loading data...</div>;
+  }
 
   return (
     <Layout>
@@ -39,7 +45,8 @@ const ViewCards = () => {
               </tr>
             </thead>
             <tbody>
-              {cardData.map((card, index) => (
+              
+              {jsonData && jsonData.map((card, index) => (
                 <tr key={index}>
                   <td className="p-1">{card.name}</td>
                   <td className="p-1">{card.type}</td>
@@ -48,7 +55,7 @@ const ViewCards = () => {
                   <td className="p-1">{card.attack}</td>
                   <td className="p-1">{card.defense}</td>
                   <td className="p-1 hidden md:table-cell">{card.description}</td>
-                  <td className="p-2 hidden md:table-cell"> {/* Hide on small screens */}
+                  <td className="p-2 hidden md:table-cell">
                     <div className="hover:transform hover:scale-125 transition-transform">
                       <Image src={card.image} width={100} height={100} />
                     </div>
