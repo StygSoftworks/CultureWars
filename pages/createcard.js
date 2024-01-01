@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import GetCards from '../components/GetCards';
+import useSWR from 'swr';
+
+
+const fetcher = async (url) => {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  return response.json();
+};
+
 
 const CreateCard = () => {
 
   
-  const { jsonData, isLoading, error } = GetCards();
+  const { data: jsonData, error } = useSWR('/api/getCards', fetcher);
 
   const [cardData, setCardData] = useState({
     name: '',
@@ -51,7 +61,7 @@ const CreateCard = () => {
       const sha = fileData.sha;
 
       // Update the file in the repository
-      const updateResponse = await fetch(process.env.github_card_api_repo, {
+      const updateResponse = await fetch(process.env.github_card_json_url, {
         method: 'PUT',
         body: JSON.stringify({
           message: "Update cards.json",
