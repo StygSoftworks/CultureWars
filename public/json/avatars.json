@@ -5,7 +5,7 @@
       "description": "Always ahead in trends and tastes.",
       "advantage": "Can predict and counter mainstream strategies.",
       "disadvantage": "Less effective as trends become popular.",
-      "image": "/images/avatars/1.webp"
+      "image": "https://i.postimg.cc/hGT5vgwQ/1.webp"
     },
     {
       "id": 2,
@@ -13,7 +13,7 @@
       "description": "Master of gadgets and tech.",
       "advantage": "Access to advanced tools and hacks.",
       "disadvantage": "Reliant on technology; weak in low-tech scenarios.",
-      "image": "/images/avatars/2.webp"
+      "image": "https://i.postimg.cc/rqm2Crxz/2.webp"
     },
     {
       "id": 3,
@@ -21,7 +21,7 @@
       "description": "Health and fitness enthusiast.",
       "advantage": "High endurance, recovers quickly.",
       "disadvantage": "Less effective in sedentary challenges.",
-      "image": "/images/avatars/3.webp"
+      "image": "https://i.postimg.cc/rMgLrJdv/3.webp"
     },
     {
       "id": 4,
@@ -29,7 +29,7 @@
       "description": "Questioner of mainstream narratives.",
       "advantage": "Can unveil hidden agendas and secrets.",
       "disadvantage": "Prone to misinformation and distractions.",
-      "image": "/images/avatars/4.webp"
+      "image": "https://i.postimg.cc/KGt6vrSp/4.webp"
     },
     {
       "id": 5,
@@ -37,7 +37,7 @@
       "description": "Ruler of the online forums.",
       "advantage": "Can control and manipulate information flow.",
       "disadvantage": "Vulnerable to social engineering.",
-      "image": "/images/avatars/5.webp"
+      "image": "https://i.postimg.cc/2kppD9JB/5.webp"
     },
     {
       "id": 6,
@@ -45,7 +45,7 @@
       "description": "Expert in trendsetting and social media.",
       "advantage": "Can sway public opinion and trends.",
       "disadvantage": "Performance affected by fluctuating popularity.",
-      "image": "/images/avatars/6.webp"
+      "image": "https://i.postimg.cc/R97mM9vC/6.webp"
     },
     {
       "id": 7,
@@ -53,7 +53,7 @@
       "description": "Shrewd in finance and business.",
       "advantage": "Excellent resource management and acquisition.",
       "disadvantage": "Susceptible to economic downturns.",
-      "image": "/images/avatars/7.webp"
+      "image": "https://i.postimg.cc/r8R672hk/7.webp"
     },
     {
       "id": 8,
@@ -61,7 +61,7 @@
       "description": "Champion of sustainability and nature.",
       "advantage": "Thrives in natural environments, resource-efficient.",
       "disadvantage": "Struggles in heavily urbanized settings.",
-      "image": "/images/avatars/8.webp"
+      "image": "https://i.postimg.cc/5bfVyGtB/8.webp"
     },
     {
       "id": 9,
@@ -69,7 +69,7 @@
       "description": "Passionate about social causes.",
       "advantage": "Can rally support and create movements.",
       "disadvantage": "Can be sidetracked by too many causes.",
-      "image": "/images/avatars/9.webp"
+      "image": "https://i.postimg.cc/tRyL1Z9q/9.webp"
     },
     {
       "id": 10,
@@ -77,7 +77,7 @@
       "description": "Lover of the rural lifestyle and traditions.",
       "advantage": "Resilient in outdoor and rugged settings.",
       "disadvantage": "Less effective in urban and high-tech scenarios.",
-      "image": "/images/avatars/10.webp"
+      "image": "https://i.postimg.cc/fDzGD9H5/10.webp"
     },
     {
       "id": 11,
@@ -85,7 +85,7 @@
       "description": "Organizer and multitasker of family life.",
       "advantage": "Great at coordination and logistics.",
       "disadvantage": "Overwhelmed when out of routine.",
-      "image": "/images/avatars/11.webp"
+      "image": "https://i.postimg.cc/PhjGVcYg/11.webp"
     },
     {
       "id": 12,
@@ -93,7 +93,7 @@
       "description": "Artistically creative and original.",
       "advantage": "Innovative, able to improvise effectively.",
       "disadvantage": "Struggles with mainstream and commercial tasks.",
-      "image": "/images/avatars/12.webp"
+      "image": "https://i.postimg.cc/jKQppXhL/12.webp"
     },
     {
       "id": 13,
@@ -101,7 +101,7 @@
       "description": "Connoisseur of fine foods and culinary arts.",
       "advantage": "Expert in taste and quality, boosts morale.",
       "disadvantage": "Limited effectiveness in basic or survival settings.",
-      "image": "/images/avatars/13.webp"
+      "image": "https://i.postimg.cc/4XnjhTR9/13.webp"
     },
     {
       "id": 14,
@@ -109,7 +109,7 @@
       "description": "Skilled in digital worlds and games.",
       "advantage": "Strategic thinker, excels in virtual challenges.",
       "disadvantage": "Less effective in physical and outdoor activities.",
-      "image": "/images/avatars/14.webp"
+      "image": "https://i.postimg.cc/rqb31YqY/14.webp"
     },
     {
       "id": 15,
@@ -117,7 +117,7 @@
       "description": "Lover of literature and knowledge.",
       "advantage": "Wise and well-informed, good at planning.",
       "disadvantage": "Physically less active, struggles in fast-paced scenarios.",
-      "image": "/images/avatars/15.webp"
+      "image": "https://i.postimg.cc/2r0P6SMY/15.webp"
     },
     {
       "id": 16,
@@ -125,7 +125,7 @@
       "description": "Prepared for the worst, survival expert.",
       "advantage": "Resilient in crisis, good at resource management.",
       "disadvantage": "Paranoid, struggles in peaceful and cooperative settings.",
-      "image": "/images/avatars/16.webp"
+      "image": "https://i.postimg.cc/fw9FBjLW/16.webp"
     },
     {
       "id": 17,
@@ -133,7 +133,7 @@
       "description": "Engaged in politics and debates.",
       "advantage": "Skilled in negotiation and influence.",
       "disadvantage": "Can be divisive, struggles in apolitical scenarios.",
-      "image": "/images/avatars/17.webp"
+      "image": "https://i.postimg.cc/kJPHZ66Q/17.webp"
     },
     {
       "id": 18,
@@ -141,7 +141,7 @@
       "description": "Afficionado of all things retro and classic.",
       "advantage": "Unique and rare item acquisition skills.",
       "disadvantage": "Struggles with modern and futuristic settings.",
-      "image": "/images/avatars/18.webp"
+      "image": "https://i.postimg.cc/ZYTMbGL0/18.webp"
     },
     {
       "id": 19,
@@ -149,6 +149,6 @@
       "description": "Obsessed with anime and Japanese culture.",
       "advantage": "Thinks they are killed in Japanese language and culture.",
       "disadvantage": "Is really not.",
-      "image": "/images/avatars/19.webp"
+      "image": "https://i.postimg.cc/M60L86Vh/19.webp"
     }
 ]
