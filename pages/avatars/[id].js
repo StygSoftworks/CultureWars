@@ -43,6 +43,24 @@ const AvatarDetail = ({ avatarData }) => {
         <div className="px-6 pt-4 pb-2">
           <span className="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-red-700 mr-2">Disadvantage:{disadvantage}</span> {/* Changed badge colors */}
         </div>
+
+        {/* Add a Next link to the previous avatar and the next avatar */}
+        <div className="flex justify-between px-6 py-4">
+          <a
+            href={`/avatars/${avatarData.id === minId ? maxId : avatarData.id - 1}`}
+            className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          >
+            Previous Avatar
+          </a>
+          <a
+            href={`/avatars/${avatarData.id === maxId ? minId : avatarData.id + 1}`}
+            className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+          >
+            Next Avatar
+          </a>
+        </div>
+
+
       </div>
     </Layout>
   );
