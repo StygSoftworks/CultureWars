@@ -165,9 +165,26 @@
       "id": 19,
       "name": "The Otaku",
       "description": "Obsessed with anime and Japanese culture.",
-      "advantage": "Thinks they are killed in Japanese language and culture.",
+      "advantage": "Thinks they are skilled in Japanese language and culture.",
       "disadvantage": "Is really not.",
       "image": "https://i.postimg.cc/M60L86Vh/19.webp",
       "power":0
+    },
+    {
+      "id": 20,
+      "name": "The Podcaster",
+      "description": "Passionate about sharing their discovered truths about the world.",
+      "advantage": "Skilled in audio production, excellent communication skills.",
+      "disadvantage": "Tends to be overly critical of critics.",
+      "image": "",
+      "power": 0
+    },{
+      "id": 21,
+      "name": "The Family Vlogger",
+      "description": "An attention-seeking family, oversharing their personal lives on the internet.",
+      "advantage": "High online visibility, potential for sponsorship deals, constant validation.",
+      "disadvantage": "Strained family relationships, loss of privacy, criticism from viewers, exploitation of minors.",
+      "image": "",
+      "power": 0
     }
 ]
