@@ -1,8 +1,7 @@
 import Layout from '../../components/Layout';
 import React from 'react';
 //parse the incoming request
-
-
+import Image from 'next/image';
 const fetchAvatarData = async (id) => {
     try {
         // Get all the avatars from the public/json/avatars.json file
@@ -39,7 +38,10 @@ const AvatarDetail = ({ avatarData, error }) => {
     return (
         <Layout>
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* <img className="w-full" src={avatarData.image} alt={avatarData.name} /> */}
+
+                <Image src={avatarData.image} alt={avatarData.name} width={500} height={500} />
+
+                 {/* <img className="w-full responsize" src={avatarData.image} alt={avatarData.name} />  */}
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{avatarData.name}</div>
                     <p className="text-gray-700 text-base">

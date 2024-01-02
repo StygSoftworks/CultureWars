@@ -1,5 +1,3 @@
-// components/Layout.js
-
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -9,20 +7,14 @@ import {
   DropdownSection,
   DropdownItem
 } from "@nextui-org/react";
+import { Button } from '@nextui-org/react';
 
 const Layout = ({ children }) => {
-
-  //get all the avatars from the public/json/avatars.json file
   const avatars = require('../public/json/avatars.json');
-
-  //get a list of all the distinct names and ids
-  const avatarList = avatars.map((avatar) => {
-    return {
-      id: avatar.id,
-      name: avatar.name,
-    };
-  });
-
+  const avatarList = avatars.map((avatar) => ({
+    id: avatar.id,
+    name: avatar.name,
+  }));
 
   return (
     <div>
@@ -31,67 +23,43 @@ const Layout = ({ children }) => {
           <div className="navbar-brand">
             <Link href="/">Home</Link>
           </div>
-          <div className="navbar-menu">
-            <ul>
-              <li>
-                <Link href="/about">About Us</Link>
-              </li>
-                <li>
-                <Link href="/viewcards">View Cards</Link>
-                </li>
-                <li>
-                <Link href="/createcard">Create Card</Link>
-                </li>
-                <li>
-                <Link href="/rules">Rules</Link>
-                </li>
-
-                {/* <li className="relative group">
-  <a href="#" className="text-gray-600 group-hover:text-gray-900">
-    Avatars
-  </a>
-  <ul className="absolute hidden mt-2 space-y-2 bg-white border border-gray-300 rounded-lg group-hover:block">
-    {avatarList.map((avatar) => (
-      <li key={avatar.id}>
-        <Link href={`/avatars/${avatar.id}`} className="block px-4 py-2 hover:bg-gray-100">
-          {avatar.name}
-        </Link>
-      </li>
-    ))}
-  </ul>
-</li> */}
-
-                <Dropdown>
-
-  <DropdownTrigger>
-    <a href="#" className="text-gray-600 group-hover:text-gray-900">
-      Avatars
-    </a>
-  </DropdownTrigger>
-
-  <DropdownMenu>
-    <DropdownSection>
-      {avatarList.map((avatar) => (
-        <DropdownItem key={avatar.id}>
-          <Link href={`/avatars/${avatar.id}`} className="block px-4 py-2 hover:bg-gray-100">
-            {avatar.name}
-          </Link>
-        </DropdownItem>
-      ))}
-    </DropdownSection>
-  </DropdownMenu>
-  
-                </Dropdown>
-
-
-
-
-              {/* Add more navigation links here */}
-            </ul>
-          </div>
+          <ul className="navbar-menu">
+            <li>
+              <Link href="/about">About Us</Link>
+            </li>
+            <li>
+              <Link href="/viewcards">View Cards</Link>
+            </li>
+            <li>
+              <Link href="/createcard">Create Card</Link>
+            </li>
+            <li>
+              <Link href="/rules">Rules</Link>
+            </li>
+            <li>
+              <Dropdown>
+                <DropdownTrigger>
+                  <Button color="primary" variant="solid" className="capitalize">
+                    Avatars
+                  </Button>
+                </DropdownTrigger>
+                <DropdownMenu>
+                  <DropdownSection>
+                    {avatarList.map((avatar) => (
+                      <DropdownItem key={avatar.id}>
+                        <Link href={`/avatars/${avatar.id}`}>{avatar.name}</Link>
+                      </DropdownItem>
+                    ))}
+                  </DropdownSection>
+                </DropdownMenu>
+              </Dropdown>
+            </li>
+          </ul>
         </div>
       </nav>
-      <main className='min-h-screen flex-col items-center justify-center p-8 text-center'>{children}</main>
+      <main className="min-h-screen flex-col items-center justify-center p-8 text-center">
+        {children}
+      </main>
       <footer>
         {/* Footer content */}
       </footer>
@@ -115,10 +83,11 @@ const Layout = ({ children }) => {
           font-size: 1.5rem;
         }
 
-        .navbar-menu ul {
+        .navbar-menu {
           list-style: none;
           padding: 0;
           display: flex;
+          align-items: center;
         }
 
         .navbar-menu li {
@@ -133,8 +102,6 @@ const Layout = ({ children }) => {
         .navbar-menu a:hover {
           text-decoration: underline;
         }
-
-        
       `}</style>
     </div>
   );
