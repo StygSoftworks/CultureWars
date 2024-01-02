@@ -13,11 +13,11 @@ const AvatarDetail = ({ avatarData }) => {
     return <div>Loading...</div>;
   }
 
-  const { name, description, advantage, disadvantage, image } = avatarData;
+  const { name, description, advantage, disadvantage, image, power } = avatarData;
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Changed background color */}
 
         <center>
         <Image
@@ -31,12 +31,17 @@ const AvatarDetail = ({ avatarData }) => {
         />
         </center>
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{name}</div>
-          <p className="text-gray-700 text-base">{description}</p>
+          <div className="font-bold text-xl mb-2 text-gray-900">{name}</div> {/* Changed text color */}
+          <p className="text-gray-800 text-base">{description}</p> {/* Changed text color */}
+        </div>
+        <div className="px-6 py-4">
+        <span className="inline-block bg-yellow-200 rounded-full px-3 py-1 text-sm font-semibold text-yellow-700 mr-2">Power:{power}</span> {/* Changed badge colors */}
         </div>
         <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{advantage}</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{disadvantage}</span>
+          <span className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-green-700 mr-2">Advantage:{advantage}</span> {/* Changed badge colors */}
+        </div>
+        <div className="px-6 pt-4 pb-2">
+          <span className="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-red-700 mr-2">Disadvantage:{disadvantage}</span> {/* Changed badge colors */}
         </div>
       </div>
     </Layout>
