@@ -5,6 +5,9 @@ import Image from 'next/image';
 // Load avatars.json and cache it
 const avatarsData = require('../../public/json/avatars.json');
 
+const minId = Math.min(...avatarsData.map((avatar) => avatar.id));
+const maxId = Math.max(...avatarsData.map((avatar) => avatar.id));
+
 const AvatarDetail = ({ avatarData }) => {
   if (!avatarData) {
     return <div>Loading...</div>;
