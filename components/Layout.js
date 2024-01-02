@@ -27,28 +27,29 @@ const Layout = ({ children }) => {
             <Link href="/">Home</Link>
           </div>
           <ul className="flex items-center list-none p-0">
-          {['/about', '/viewcards', '/createcard', '/rules'].map((path, index) => (
+          {[ '/viewcards', '/rules','/about'].map((path, index) => (
   <li className="mr-5" key={index}>
     <Link href={path}>{path.substring(1, 2).toUpperCase() + path.substring(2)}</Link>
   </li>
 ))}
             <li>
             <Dropdown>
-                <DropdownTrigger>
-                  <Button color="primary" variant="solid" className="capitalize">
-                    Avatars
-                  </Button>
-                </DropdownTrigger>
-                <DropdownMenu className="bg-white shadow-lg">
-                  <DropdownSection>
-                    {avatarList.map((avatar) => (
-                      <DropdownItem key={avatar.id} className="hover:bg-gray-100 hover:text-gray-800"> {/* Added hover effect */}
-                        <Link href={`/avatars/${avatar.id}`}>{avatar.name}</Link>
-                      </DropdownItem>
-                    ))}
-                  </DropdownSection>
-                </DropdownMenu>
-              </Dropdown>
+          <DropdownTrigger>
+            <Button color="primary" variant="solid" className="capitalize">
+              Avatars
+            </Button>
+          </DropdownTrigger>
+          <DropdownMenu className="bg-white shadow-lg custom-dropdown">
+            <DropdownSection>
+              {avatarList.map((avatar) => (
+                <DropdownItem key={avatar.id} className="hover:bg-gray-100 hover:text-gray-800 custom-dropdown-item">
+                  <Link href={`/avatars/${avatar.id}`}>{avatar.name}</Link>
+                </DropdownItem>
+              ))}
+            </DropdownSection>
+          </DropdownMenu>
+        </Dropdown>
+
             </li>
           </ul>
         </div>

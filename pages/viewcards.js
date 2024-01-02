@@ -28,6 +28,14 @@ const ViewCards = () => {
     <Layout>
       <main>
         <h1 className="text-2xl font-bold">View Cards</h1>
+
+        {/* Link to create a new Card */}
+        <Link href="/createcard" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block text-left ml-0">
+    Create a New Card
+</Link>
+
+
+
         <div className="overflow-x-auto">
           <table className="min-w-full">
             <thead>
