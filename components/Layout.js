@@ -16,37 +16,33 @@ const Layout = ({ children }) => {
     name: avatar.name,
   }));
 
+  //sort the list of avatars by name
+  avatarList.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <div>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <div className="navbar-brand">
+      <nav className="bg-gray-800 text-white py-2">
+        <div className="max-w-screen-lg mx-auto flex justify-between items-center">
+          <div className="text-xl">
             <Link href="/">Home</Link>
           </div>
-          <ul className="navbar-menu">
+          <ul className="flex items-center list-none p-0">
+          {['/about', '/viewcards', '/createcard', '/rules'].map((path, index) => (
+  <li className="mr-5" key={index}>
+    <Link href={path}>{path.substring(1, 2).toUpperCase() + path.substring(2)}</Link>
+  </li>
+))}
             <li>
-              <Link href="/about" >About Us</Link>
-            </li>
-            <li>
-              <Link href="/viewcards">View Cards</Link>
-            </li>
-            <li>
-              <Link href="/createcard">Create Card</Link>
-            </li>
-            <li>
-              <Link href="/rules">Rules</Link>
-            </li>
-            <li>
-              <Dropdown>
+            <Dropdown>
                 <DropdownTrigger>
                   <Button color="primary" variant="solid" className="capitalize">
                     Avatars
                   </Button>
                 </DropdownTrigger>
-                <DropdownMenu>
+                <DropdownMenu className="bg-white shadow-lg">
                   <DropdownSection>
                     {avatarList.map((avatar) => (
-                      <DropdownItem key={avatar.id}>
+                      <DropdownItem key={avatar.id} className="hover:bg-gray-100 hover:text-gray-800"> {/* Added hover effect */}
                         <Link href={`/avatars/${avatar.id}`}>{avatar.name}</Link>
                       </DropdownItem>
                     ))}
@@ -57,52 +53,12 @@ const Layout = ({ children }) => {
           </ul>
         </div>
       </nav>
-      <main className="min-h-screen flex-col items-center justify-center p-8 text-center">
+      <main className="min-h-screen flex flex-col items-center justify-center p-8 text-center">
         {children}
       </main>
       <footer>
         {/* Footer content */}
       </footer>
-
-      <style jsx>{`
-        .navbar {
-          background-color: #333;
-          color: #fff;
-          padding: 10px 0;
-        }
-
-        .navbar-container {
-          max-width: 960px;
-          margin: 0 auto;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .navbar-brand {
-          font-size: 1.5rem;
-        }
-
-        .navbar-menu {
-          list-style: none;
-          padding: 0;
-          display: flex;
-          align-items: center;
-        }
-
-        .navbar-menu li {
-          margin-right: 20px;
-        }
-
-        .navbar-menu a {
-          color: #fff;
-          text-decoration: none;
-        }
-
-        .navbar-menu a:hover {
-          text-decoration: underline;
-        }
-      `}</style>
     </div>
   );
 };
