@@ -25,16 +25,16 @@ const Layout = ({ children }) => {
           </div>
           <ul className="navbar-menu">
             <li>
-              <Link href="/about">About Us</Link>
+              <Link href="/about" textValue="About Us"></Link>
             </li>
             <li>
-              <Link href="/viewcards">View Cards</Link>
+              <Link href="/viewcards" textValue="View Cards"></Link>
             </li>
             <li>
-              <Link href="/createcard">Create Card</Link>
+              <Link href="/createcard" textValue="Create Card"></Link>
             </li>
             <li>
-              <Link href="/rules">Rules</Link>
+              <Link href="/rules" textValue="Rules"></Link>
             </li>
             <li>
               <Dropdown>
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
                   <DropdownSection>
                     {avatarList.map((avatar) => (
                       <DropdownItem key={avatar.id}>
-                        <Link href={`/avatars/${avatar.id}`}>{avatar.name}</Link>
+                        <Link href={`/avatars/${avatar.id}`} textValue={avatar.name}></Link>
                       </DropdownItem>
                     ))}
                   </DropdownSection>
