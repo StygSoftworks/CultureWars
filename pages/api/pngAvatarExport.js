@@ -5,9 +5,17 @@ export default async (req, res) => {
 
   //get the data based on the avatarId
 
-  //get the avatar data from the json file
-  const avatarsData = require('../../public/json/avatars.json');
+  const urlAvatarJson = `${process.env.BASE_URL}/json/avatars.json`;
 
+  //get the avatar data from the url
+  const response = await fetch(urlAvatarJson);
+  
+  if (!response.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  
+  const avatarsData = await response.json();
+  
 
   const avatarData = avatarsData.find((avatar) => avatar.id === parseInt(avatarId));
 
