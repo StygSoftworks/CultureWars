@@ -2,9 +2,17 @@ import Layout from '../../components/Layout';
 import React from 'react';
 import Image from 'next/image';
 
+const urlAvatarJson = `${process.env.BASE_URL}/json/avatars.json`;
 
-// Load avatars.json and cache it
-const avatarsData = require('../../public/json/avatars.json');
+//get the avatar data from the url
+const response = await fetch(urlAvatarJson);
+
+if (!response.ok) {
+  throw new Error('Failed to fetch data');
+}
+
+const avatarsData = await response.json();
+
 
 const minId = Math.min(...avatarsData.map((avatar) => avatar.id));
 const maxId = Math.max(...avatarsData.map((avatar) => avatar.id));
