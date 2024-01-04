@@ -19,7 +19,7 @@ const AvatarDetail = ({ avatarData }) => {
     <Layout>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Changed background color */}
 
-        <center>
+        {/* <center>
         <Image
           src={image}
           alt={name}
@@ -29,7 +29,7 @@ const AvatarDetail = ({ avatarData }) => {
           className='rounded-lg shadow-lg'
           priority // Mark image as high priority
         />
-        </center>
+        </center> */}
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2 text-gray-900">{name}</div> {/* Changed text color */}
           <p className="text-gray-800 text-base">{description}</p> {/* Changed text color */}
