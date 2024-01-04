@@ -1,5 +1,4 @@
 import { createCanvas, loadImage } from 'canvas';
-import fs from 'fs';
 
 export default async (req, res) => {
   const { query: { avatarId } } = req;
@@ -37,7 +36,7 @@ export default async (req, res) => {
   ctx.lineWidth = 10;
   ctx.strokeStyle = 'black';
   ctx.stroke();
-  
+
   // Customize and draw your content here using canvas API
   ctx.font = '40px Arial';
   ctx.fillStyle = 'black';
