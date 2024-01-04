@@ -11,6 +11,8 @@
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
     "axios": "^1.6.3",
+    "canvas": "^2.11.2",
+    "fs": "^0.0.1-security",
     "html-to-image": "^1.11.11",
     "next": "14.0.4",
     "node-fetch": "^3.3.2",

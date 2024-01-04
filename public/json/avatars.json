@@ -1,166 +1,256 @@
 [
-    {
-      "id": 1,
-      "name": "The Hipster",
-      "description": "Always ahead in trends and tastes.",
-      "advantage": "Can predict and counter mainstream strategies.",
-      "disadvantage": "Less effective as trends become popular.",
-      "image": "https://i.postimg.cc/hGT5vgwQ/1.webp",
-      "power":0
-    },
-    {
-      "id": 2,
-      "name": "The Tech Bro",
-      "description": "Master of gadgets and tech.",
-      "advantage": "Access to advanced tools and hacks.",
-      "disadvantage": "Reliant on technology; weak in low-tech scenarios.",
-      "image": "https://i.postimg.cc/rqm2Crxz/2.webp",
-      "power":0
-    },
-    {
-      "id": 3,
-      "name": "The Fitness Guru",
-      "description": "Health and fitness enthusiast.",
-      "advantage": "High endurance, recovers quickly.",
-      "disadvantage": "Less effective in sedentary challenges.",
-      "image": "https://i.postimg.cc/rMgLrJdv/3.webp",
-      "power":0
-    },
-    {
-      "id": 4,
-      "name": "The Conspiracy Theorist",
-      "description": "Questioner of mainstream narratives.",
-      "advantage": "Can unveil hidden agendas and secrets.",
-      "disadvantage": "Prone to misinformation and distractions.",
-      "image": "https://i.postimg.cc/KGt6vrSp/4.webp",
-      "power":0
-    },
-    {
-      "id": 5,
-      "name": "The Discord Moderator",
-      "description": "Ruler of the online forums.",
-      "advantage": "Can control and manipulate information flow.",
-      "disadvantage": "Vulnerable to social engineering.",
-      "image": "https://i.postimg.cc/2kppD9JB/5.webp",
-      "power":0
-    },
-    {
-      "id": 6,
-      "name": "The Social Media Influencer",
-      "description": "Expert in trendsetting and social media.",
-      "advantage": "Can sway public opinion and trends.",
-      "disadvantage": "Performance affected by fluctuating popularity.",
-      "image": "https://i.postimg.cc/R97mM9vC/6.webp",
-      "power":0
-    },
-    {
-      "id": 7,
-      "name": "The Wall Street Wolf",
-      "description": "Shrewd in finance and business.",
-      "advantage": "Excellent resource management and acquisition.",
-      "disadvantage": "Susceptible to economic downturns.",
-      "image": "https://i.postimg.cc/r8R672hk/7.webp",
-      "power":0
-    },
-    {
-      "id": 8,
-      "name": "The Eco-Warrior",
-      "description": "Champion of sustainability and nature.",
-      "advantage": "Thrives in natural environments, resource-efficient.",
-      "disadvantage": "Struggles in heavily urbanized settings.",
-      "image": "https://i.postimg.cc/5bfVyGtB/8.webp",
-      "power":0
-    },
-    {
-      "id": 9,
-      "name": "The College Activist",
-      "description": "Passionate about social causes.",
-      "advantage": "Can rally support and create movements.",
-      "disadvantage": "Can be sidetracked by too many causes.",
-      "image": "https://i.postimg.cc/tRyL1Z9q/9.webp",
-      "power":0
-    },
-    {
-      "id": 10,
-      "name": "The Country Cowboy",
-      "description": "Lover of the rural lifestyle and traditions.",
-      "advantage": "Resilient in outdoor and rugged settings.",
-      "disadvantage": "Less effective in urban and high-tech scenarios.",
-      "image": "https://i.postimg.cc/fDzGD9H5/10.webp",
-      "power":0
-    },
-    {
-      "id": 11,
-      "name": "The Suburban Soccer Mom",
-      "description": "Organizer and multitasker of family life.",
-      "advantage": "Great at coordination and logistics.",
-      "disadvantage": "Overwhelmed when out of routine.",
-      "image": "https://i.postimg.cc/PhjGVcYg/11.webp",
-      "power":0
-    },
-    {
-      "id": 12,
-      "name": "The Indie Musician",
-      "description": "Artistically creative and original.",
-      "advantage": "Innovative, able to improvise effectively.",
-      "disadvantage": "Struggles with mainstream and commercial tasks.",
-      "image": "https://i.postimg.cc/jKQppXhL/12.webp",
-      "power":0
-    },
-    {
-      "id": 13,
-      "name": "The Foodie",
-      "description": "Connoisseur of fine foods and culinary arts.",
-      "advantage": "Expert in taste and quality, boosts morale.",
-      "disadvantage": "Limited effectiveness in basic or survival settings.",
-      "image": "https://i.postimg.cc/4XnjhTR9/13.webp",
-      "power":0
-    },
-    {
-      "id": 14,
-      "name": "The Gamer",
-      "description": "Skilled in digital worlds and games.",
-      "advantage": "Strategic thinker, excels in virtual challenges.",
-      "disadvantage": "Less effective in physical and outdoor activities.",
-      "image": "https://i.postimg.cc/rqb31YqY/14.webp",
-      "power":0
-    },
-    {
-      "id": 15,
-      "name": "The Bookworm",
-      "description": "Lover of literature and knowledge.",
-      "advantage": "Wise and well-informed, good at planning.",
-      "disadvantage": "Physically less active, struggles in fast-paced scenarios.",
-      "image": "https://i.postimg.cc/2r0P6SMY/15.webp",
-      "power":0
-    },
-    {
-      "id": 16,
-      "name": "The Doomsday Prepper",
-      "description": "Prepared for the worst, survival expert.",
-      "advantage": "Resilient in crisis, good at resource management.",
-      "disadvantage": "Paranoid, struggles in peaceful and cooperative settings.",
-      "image": "https://i.postimg.cc/fw9FBjLW/16.webp",
-      "power":0
-    },
-    {
-      "id": 17,
-      "name": "The Political Junkie",
-      "description": "Engaged in politics and debates.",
-      "advantage": "Skilled in negotiation and influence.",
-      "disadvantage": "Can be divisive, struggles in apolitical scenarios.",
-      "image": "https://i.postimg.cc/kJPHZ66Q/17.webp",
-      "power":0
-    },
-    {
-      "id": 18,
-      "name": "The Vintage Collector",
-      "description": "Afficionado of all things retro and classic.",
-      "advantage": "Unique and rare item acquisition skills.",
-      "disadvantage": "Struggles with modern and futuristic settings.",
-      "image": "https://i.postimg.cc/ZYTMbGL0/18.webp",
-      "power":0
-    },
+  {
+    "id": 1,
+    "name": "The Hipster",
+    "description": "Obsessively pretentious about being non-mainstream. Tries to outsmart common strategies but quickly loses relevance as their 'unique' trends hit the mainstream.",
+    "advantage": "Can predict and counter mainstream strategies.",
+    "disadvantage": "Less effective as trends become popular.",
+    "image": "https://i.postimg.cc/hGT5vgwQ/1.webp",
+    "power":0,
+    "rant": [
+      "The hipsters, the embodiment of irony and pretentiousness in American subcultures. These folks have taken the art of being insufferable to a whole new level. They have this uncanny ability to turn even the most mundane activities into a spectacle of pseudo-intellectualism. Just try going to a coffee shop in a hipster neighborhood, and you'll be bombarded with a menu filled with obscure brewing methods and coffee beans that were hand-picked by a one-eyed, vegan, indie musician who only plays the accordion. And don't get me started on their facial hair obsession. If you can't braid your mustache, are you even a real hipster?",
+      "But it's not just the coffee shops and facial hair that make hipsters the worst. It's their holier-than-thou attitude when it comes to everything mainstream. They'll scoff at you for listening to anything that's not on vinyl, and God forbid you mention you enjoy a blockbuster movie or a Top 40 song. They'll roll their eyes so hard that you'd think they were auditioning for a part in a silent film from the 1920s. It's as if they believe that their taste in obscure, niche interests somehow makes them superior to the rest of us plebeians.",
+      "And let's not forget the fashion choices of hipsters. I mean, who needs practical clothing when you can wear skinny jeans so tight that you need a team of engineers to help you put them on? And the oversized, ironic graphic tees that look like they were plucked from a dumpster behind a thrift store? It's like they raided their grandparents' closet and decided it was high fashion. In the end, hipsters are like the annoying, distant relatives who show up at family gatherings and make everyone uncomfortable with their incessant talk about craft beers, obscure indie bands, and the latest artisanal pickle shop. Give me a break!"
+      ]
+  },
+  {
+    "id": 2,
+    "name": "The Tech Bro",
+    "description": "A gadget-obsessed show-off, overly reliant on tech toys. Falls apart in situations where their beloved tech can't bail them out.",
+    "advantage": "Access to advanced tools and hacks.",
+    "disadvantage": "Reliant on technology; weak in low-tech scenarios.",
+    "image": "https://i.postimg.cc/rqm2Crxz/2.webp",
+    "power":0,
+    "rant": [
+      "Oh, the Tech Bro subculture, the epitome of everything wrong with modern America. These guys, and yes, it's usually guys, are like a real-life version of the 'Silicon Valley' TV show, but without the charm and humor. They're the kings of the digital kingdom, or so they think, and they're not shy about letting you know it.",
+      "First of all, let's talk about the fashion. It's like they all went shopping in the same store and decided that hoodies, skinny jeans, and ill-fitting blazers were the height of style. And don't even get me started on the obsession with Patagonia vests. They look like a bunch of frat boys who never grew up but somehow stumbled into a high-paying tech job. It's as if they've never seen a suit and tie in their lives, and the idea of dressing professionally is anathema to them.",
+      "But it's not just the fashion that's problematic. It's the attitude. These Tech Bros are convinced that they're changing the world with their apps and startups, but in reality, they're often just creating solutions to problems that don't exist. They throw around buzzwords like 'disruption' and 'innovation' like confetti at a parade, but more often than not, their products are just overhyped, overvalued, and underwhelming. And let's not forget their penchant for bro culture, which can lead to toxic work environments and a lack of diversity in the tech industry. So, yes, the Tech Bro subculture is a cringe-worthy blend of fashion faux pas and misguided arrogance that makes you wonder how they've become so influential in our society."
+      ]
+  },
+  {
+    "id": 3,
+    "name": "The Fitness Guru",
+    "description": "A self-obsessed health fanatic, useless beyond their gym routine. Struggles intellectually and in any setting that doesn't require lifting weights.",
+    "advantage": "High endurance, recovers quickly.",
+    "disadvantage": "Less effective in sedentary challenges.",
+    "image": "https://i.postimg.cc/rMgLrJdv/3.webp",
+    "power":0,
+    "rant": [
+      "The fitness gurus, the epitome of overzealousness and narcissism in the realm of American subcultures. These individuals have taken the art of flexing their muscles and flaunting their protein shakes to a whole new level. It's as if they believe that every moment of their lives must revolve around their obsession with working out. They'll shame you for indulging in a slice of pizza, as if enjoying a cheat meal is a cardinal sin punishable by eternal burpees in a fiery gym of damnation.",
+      "But it's not just their dietary sanctimony that makes fitness gurus insufferable. It's their constant need to show off their perfectly sculpted bodies on social media. Every day, your feed is bombarded with shirtless selfies, gym mirror shots, and videos of them lifting weights that look more like a car engine than something a human should be lifting. And let's not forget their obsession with inspirational quotes superimposed on these sweaty workout photos. Because nothing says motivation like a picture of a glistening, overly-tanned body with the caption, 'No pain, no gain.'",
+      "And don't even get me started on their never-ending quest for the latest fitness trends and supplements. They'll drop more money on a single tub of powdered unicorn horn extract than most people spend on groceries in a month, all in the name of 'optimizing their gains.' It's like they believe that having biceps the size of watermelons will somehow solve all of life's problems. In the end, fitness gurus are like those annoying personal trainers who keep bugging you to sign up for their boot camp classes or try their 'revolutionary' workout program that promises to turn you into a Greek god in just four easy payments of $99.99. Give me a break!"
+      ]
+  },
+  {
+    "id": 4,
+    "name": "The Conspiracy Theorist",
+    "description": "A paranoid skeptic, always chasing after baseless theories. Easily fooled and distracted by the next big conspiracy, contributing nothing of substance.",
+    "advantage": "Can unveil hidden agendas and secrets.",
+    "disadvantage": "Prone to misinformation and distractions.",
+    "image": "https://i.postimg.cc/KGt6vrSp/4.webp",
+    "power":0,
+    "rant": [
+      "The conspiracy theorists, the crown jewels of absurdity in American subcultures. These individuals have truly mastered the art of believing the most outlandish and baseless claims while simultaneously rejecting well-established facts and evidence. It's like they have a PhD in delusion. They'll eagerly tell you how the moon landing was faked, the Earth is flat, and the government is controlled by lizard people from another dimension. I mean, who needs science, logic, or common sense when you can have a YouTube video with dramatic music and ominous voiceovers as your primary source of information?",
+      "But it's not just their bizarre beliefs that make conspiracy theorists the worst; it's their unwavering commitment to spreading their ludicrous ideas to anyone who will listen. They'll corner you at a party, trap you in an elevator, or even hijack a family dinner conversation just to regale you with their latest 'revelations.' You'll find yourself nodding politely while secretly searching for the nearest exit. And if you dare question their conspiracy theories, be prepared for a barrage of 'evidence' that is as solid as a house of cards in a hurricane.",
+      "And let's not forget their obsession with secret societies and hidden agendas. It's like they're living in a poorly written spy novel, and they're the only ones who have cracked the code. They'll spend hours dissecting every detail of a blurry photograph, convinced that it holds the key to exposing a global conspiracy. Meanwhile, the rest of us are just trying to get on with our lives without worrying about whether our toaster is spying on us. In the end, conspiracy theorists are like the overenthusiastic carnival barkers of the information world, promising you the greatest show on Earth but delivering nothing more than a sideshow of absurdity. It's a spectacle you can't unsee!"
+      ]
+  },
+  {
+    "id": 5,
+    "name": "The Discord Moderator",
+    "description": "A power-hungry keyboard warrior ruling over online forums. Easily manipulated and lacks real-world influence or skills.",
+    "advantage": "Can control and manipulate information flow.",
+    "disadvantage": "Vulnerable to social engineering.",
+    "image": "https://i.postimg.cc/2kppD9JB/5.webp",
+    "power":0,
+    "rant": [
+      "The Discord moderators, the self-proclaimed guardians of the internet's digital utopia. These folks have taken the art of online control to a level that would make even George Orwell raise an eyebrow. It's like they were handed a virtual badge and suddenly thought they were the sheriffs of the Wild West, except instead of a six-shooter, they wield a ban hammer with reckless abandon.",
+      "But it's not just their love for power that makes Discord moderators the worst. It's their unwavering dedication to enforcing arbitrary rules and regulations that seem to change on a whim. Just try having a casual conversation in a Discord server, and you'll find yourself walking on eggshells, terrified of saying anything that might offend the delicate sensibilities of these self-appointed overlords. It's like trying to navigate a minefield made of trigger warnings and emoji etiquette.",
+      "And let's not forget their obsession with emoji spam. If you so much as use one too many emojis in a sentence, you'll be swiftly branded as a heretic and subjected to a barrage of warnings, mutings, and even bans. It's as if they believe that the fate of the internet itself rests on their ability to regulate the use of smiley faces and thumbs up. In the end, Discord moderators are like the hall monitors of the digital world, wielding their authority with all the grace and subtlety of a bullhorn-wielding crossing guard. It's enough to make you want to disconnect and go live in a cave just to escape their virtual tyranny. Give me a break!"
+      ]
+  },
+  {
+    "id": 6,
+    "name": "The Social Media Influencer",
+    "description": "An attention-seeking trend chaser, their worth tied to fickle online popularity. Crumbles when their follower count drops.",
+    "advantage": "Can sway public opinion and trends.",
+    "disadvantage": "Performance affected by fluctuating popularity.",
+    "image": "https://i.postimg.cc/R97mM9vC/6.webp",
+    "power":0,
+    "rant": [
+      "The social media influencers, the absolute worst of American subcultures. These individuals have managed to turn narcissism into a full-blown career, and it's a spectacle of shallowness and self-absorption like no other. Their entire existence revolves around posting carefully curated photos of themselves, pretending that every moment of their life is a glamorous adventure that the rest of us should envy. Newsflash: your avocado toast breakfast and staged 'candid' beach photos aren't changing the world!",
+      "But it's not just the incessant stream of perfectly posed selfies that makes social media influencers insufferable. It's their obsession with 'influencing' and 'brand partnerships.' They'll hawk anything from detox teas that do nothing but give you diarrhea to overpriced skincare products that have more chemicals than a science lab. And don't get me started on the #ad and #sponsored posts that pollute our feeds. It's like they've turned their entire lives into a never-ending infomercial, and we're the unwilling audience.",
+      "And let's not forget the relentless pursuit of followers and likes. Social media influencers will do anything for that dopamine hit, from staging elaborate pranks to exploiting personal tragedies for engagement. They'll buy fake followers and engage in endless drama with other influencers just to stay relevant. It's a race to the bottom, and the saddest part is that they've convinced themselves that their 'influence' actually matters. In reality, they're just clogging up our feeds with their vapid content and making us question the state of humanity. Social media influencers are the embodiment of everything that's wrong with modern society, and it's time we hit the 'unfollow' button on this absurd subculture."
+      ]
+  },
+  {
+    "id": 7,
+    "name": "The Wall Street Wolf",
+    "description": "A greedy, cutthroat financial player, vulnerable to the slightest market wind. Panics and becomes useless in any economic downturn.",
+    "advantage": "Excellent resource management and acquisition.",
+    "disadvantage": "Susceptible to economic downturns.",
+    "image": "https://i.postimg.cc/r8R672hk/7.webp",
+    "power":0,
+    "rant": [
+      "The Wall Street Wolves, the embodiment of greed and excess in American subcultures. These folks have turned the pursuit of wealth into a cutthroat blood sport. They treat the stock market like a casino, and their moral compass is as lost as a sock in the dryer. It's like they took Gordon Gekko's 'Greed is good' mantra and turned it into their personal creed.",
+      "But it's not just their ruthless pursuit of money that makes them the worst. It's their complete disregard for the consequences of their actions. They'll manipulate markets, engage in insider trading, and create financial crises that wreak havoc on the lives of everyday people, all in the name of profit. And when the dust settles, they'll sip their expensive cocktails in their penthouse offices and laugh about it. It's as if they have a contest to see who can be the most morally bankrupt.",
+      "And let's not forget their ostentatious displays of wealth. The Wall Street Wolves flaunt their opulence with no shame whatsoever. From their luxury sports cars to their million-dollar penthouses, they revel in their excess while the rest of us struggle to make ends meet. It's like they're trying to outdo each other in a competition to see who can be the most obnoxious billionaire. In the end, the Wall Street Wolves are like a pack of vultures, circling the financial markets and feasting on the carcasses of hardworking people's dreams. Give me a break!"
+      ]
+  },
+  {
+    "id": 8,
+    "name": "The Eco-Warrior",
+    "description": "A preachy environmentalist, lost outside their green bubble. Struggles with reality in urban environments and modern society.",
+    "advantage": "Thrives in natural environments, resource-efficient.",
+    "disadvantage": "Struggles in heavily urbanized settings.",
+    "image": "https://i.postimg.cc/5bfVyGtB/8.webp",
+    "power":0,
+    "rant": [
+      "The eco-warriors, the self-proclaimed saviors of the planet who manage to make even the noblest cause insufferable. These individuals have taken environmentalism to a whole new level of sanctimoniousness. They'll lecture you about your carbon footprint while sipping on their kale smoothies, which probably have a lower carbon footprint than the air they expel while preaching. It's as if they believe they're the only ones who care about the environment, and the rest of us are just heartless destroyers of the planet.",
+      "But it's not just their holier-than-thou attitude that makes eco-warriors unbearable. It's their extreme measures that often border on the absurd. They'll ride their bicycles everywhere, rain or shine, and act like they're single-handedly saving the world from climate change, even though their bikes are made of materials that are anything but eco-friendly. And don't even get me started on their obsession with reusable everything, from shopping bags to straws. You'd think they invented the concept of reducing waste when, in reality, they're just making life more inconvenient for the rest of us.",
+      "And let's not forget their fashion choices. Eco-warriors love to dress in earthy tones and wear clothing made from sustainable materials. But they'll spend a small fortune on a single organic cotton t-shirt and then proudly tell you about how they're living a minimalist lifestyle. It's like they're trying to out-virtue-signal each other with their eco-friendly wardrobes. In the end, eco-warriors are like the annoying neighbors who compost their food scraps and insist on telling you how much better they are for it while you're just trying to enjoy a barbecue in peace. Give me a break!"
+      ]
+  },
+  {
+    "id": 9,
+    "name": "The College Activist",
+    "description": "Overzealously juggling too many causes, effective at none. Easily sidetracked and overwhelmed by their own activism.",
+    "advantage": "Can rally support and create movements.",
+    "disadvantage": "Can be sidetracked by too many causes.",
+    "image": "https://i.postimg.cc/tRyL1Z9q/9.webp",
+    "power":0,
+    "rant": [
+      "The college activists, the self-proclaimed champions of social justice and change on campus. These individuals have managed to turn even the most trivial issues into full-blown protests, complete with catchy slogans and handmade signs. It's like they majored in 'Finding Something to Complain About 101.' If you ever want to witness the epitome of performative wokeness, just attend one of their rallies. You'll be bombarded with a cacophony of buzzwords and virtue signaling that could make even the most well-meaning person roll their eyes.",
+      "But it's not just the protests that make college activists the worst. It's their tendency to jump on any bandwagon without doing their homework. They'll rally against a cause one day, only to switch sides the next when the wind of popular opinion changes. It's like they treat activism as a trendy fashion statement that can be discarded when it's no longer 'in.' And let's not forget their love for cancel culture. If you ever say something even slightly controversial, be prepared to face the wrath of the keyboard warriors who will stop at nothing to get you 'canceled' and ruin your life.",
+      "And don't get me started on their obsession with safe spaces and trigger warnings. It's as if they believe the entire world should cater to their fragile sensibilities. Heaven forbid anyone has a differing opinion or presents an idea that challenges their worldview; they'll retreat to their safe space faster than you can say 'free speech.' In the end, college activists are like the overzealous hall monitors of the academic world, policing every word and action to ensure it aligns with their ever-evolving moral code. Give me a break!"
+      ]
+  },
+  {
+    "id": 10,
+    "name": "The Country Cowboy",
+    "description": "A backward, tradition-clinging individual, inept in modern settings. Struggles with anything that doesn't involve horses or hay.",
+    "advantage": "Resilient in outdoor and rugged settings.",
+    "disadvantage": "Less effective in urban and high-tech scenarios.",
+    "image": "https://i.postimg.cc/fDzGD9H5/10.webp",
+    "power":0,
+    "rant": [
+      "The country cowboys, the living clichés of American subcultures. These folks have managed to turn outdated stereotypes into a lifestyle choice that's as cringe-worthy as a rodeo clown's makeup. First of all, their obsession with cowboy hats and boots is nothing short of baffling. You'd think they were auditioning for a role in a Wild West-themed community theater production rather than going about their daily lives.",
+      "But it's not just the fashion choices that make country cowboys the worst. It's their over-the-top, exaggerated accents that they put on like a poorly rehearsed stage play. You'd swear they think they're auditioning for the lead role in 'The Dukes of Hazzard' reboot. And don't get me started on their constant use of phrases like 'y'all' and 'howdy.' It's like they're trying to out-redneck each other, and it's painful to witness.",
+      "And let's not forget their obsession with pickup trucks that are bigger than some small houses. It's as if they believe that compensating for something is a valid reason to turn the streets into their personal monster truck rallies. Good luck finding a parking spot that can accommodate these behemoths. In the end, country cowboys are like characters straight out of a cheesy country song, living in a world where flannel shirts and hay bales are the height of sophistication. Giddy-up, partner!"
+      ]
+  },
+  {
+    "id": 11,
+    "name": "The Suburban Soccer Mom",
+    "description": "A frantic multitasker, panicking outside her scheduled world. Completely lost when life throws a curveball.",
+    "advantage": "Great at coordination and logistics.",
+    "disadvantage": "Overwhelmed when out of routine.",
+    "image": "https://i.postimg.cc/PhjGVcYg/11.webp",
+    "power":0,
+    "rant": [
+      "The suburban soccer moms, the embodiment of minivan-driving, latte-sipping, overbearing parenting in American subcultures. These women have taken the art of helicopter parenting to a whole new level. Just try attending a youth soccer game in a suburban neighborhood, and you'll witness a spectacle of competitive moms who act like they're coaching the next generation of World Cup superstars. They scream at the referees, berate their kids for not scoring goals, and treat every game like it's the championship match of their child's life.",
+      "But it's not just the soccer games that make suburban soccer moms the worst. It's their never-ending quest to one-up each other in the realm of Pinterest-worthy home decor and gourmet lunchbox creations. You'll find them in a constant battle to outdo their fellow moms with extravagant birthday parties that rival Hollywood premieres. And don't get me started on the passive-aggressive gossip sessions that occur at the local Starbucks. If you're not up to date on the latest school drama or who's wearing the trendiest athleisure wear, you're basically an outcast.",
+      "And let's not forget their obsession with SUVs that are bigger than some small aircraft. They'll cut you off in the school drop-off line with their oversized vehicles, all while sipping on their designer lattes. It's as if they believe that driving a tank-sized SUV makes them impervious to traffic rules and common courtesy. In the end, suburban soccer moms are like the overbearing, judgmental in-laws who never miss an opportunity to criticize your parenting choices and make you feel like you're failing at life. Give me a break!"
+      ]
+  },
+  {
+    "id": 12,
+    "name": "The Indie Musician",
+    "description": "A self-proclaimed artist too 'original' for mainstream success. Struggles with anything that requires actual commercial viability.",
+    "advantage": "Innovative, able to improvise effectively.",
+    "disadvantage": "Struggles with mainstream and commercial tasks.",
+    "image": "https://i.postimg.cc/jKQppXhL/12.webp",
+    "power":0,
+    "rant": [
+      "The indie musicians, the self-proclaimed purveyors of 'authentic' music in the vast sea of mainstream mediocrity. These folks have taken the art of obscurity to a whole new level. They have this uncanny ability to turn even the most basic musical instruments into a cacophony of noise that only the most dedicated hipster can appreciate. Just try attending an indie music show, and you'll be subjected to a band that sounds like they're playing a rusty washboard accompanied by a kazoo and a broken accordion. If you can't tell the difference between their 'experimental' sound and a toddler banging on pots and pans, are you even a real indie music enthusiast?",
+      "But it's not just the avant-garde music that makes indie musicians the worst. It's their pretentious attitude when it comes to anything remotely mainstream. They'll scoff at you for even knowing the names of popular artists, and God forbid you mention you enjoy a catchy pop song. They'll roll their eyes so hard that you'd think they were auditioning for a part in a silent film from the 1920s. It's as if they believe that their obscure, underground tastes somehow make them the gatekeepers of musical authenticity.",
+      "And let's not forget their fashion choices. I mean, who needs a wardrobe that doesn't consist entirely of flannel shirts and vintage boots? And the unkempt, bedhead hairstyle that looks like they just rolled out of bed after a three-day music festival in the woods? It's like they raided a thrift store and decided that looking like a '90s grunge reject was the height of fashion. In the end, indie musicians are like that guy at the party who insists on playing their homemade experimental noise album and ruins everyone's mood. Give me a break!"
+      ]
+  },
+  {
+    "id": 13,
+    "name": "The Foodie",
+    "description": "A pretentious eater with a narrow skill set limited to tasting food. Useless in practical situations where culinary expertise isn't required.",
+    "advantage": "Expert in taste and quality, boosts morale.",
+    "disadvantage": "Limited effectiveness in basic or survival settings.",
+    "image": "https://i.postimg.cc/4XnjhTR9/13.webp",
+    "power":0,
+    "rant": [
+      "The foodies, the culinary cultists who have managed to turn the simple act of eating into a never-ending, gastronomic nightmare. These self-proclaimed connoisseurs of cuisine will stop at nothing to make you feel like a plebeian with your everyday meals. They've mastered the art of overanalyzing every bite and turning a casual dinner into a dissertation on the intricacies of organic, locally-sourced, sustainably-harvested, gluten-free, farm-to-table nonsense.",
+      "But it's not just their obsession with food that makes foodies insufferable. It's their insatiable need to document every morsel they consume. You can't enjoy a meal with a foodie without enduring a photoshoot that would put a professional photographer to shame. They'll snap pictures from every angle, apply a dozen filters, and then proceed to hashtag the life out of their food on social media. By the time they're done, your meal will be cold, and your patience will be in short supply.",
+      "And let's not forget their never-ending quest for the latest food trends. Foodies will chase after obscure ingredients and exotic dishes like they're on a treasure hunt, all while ridiculing anyone who dares to enjoy a simple slice of pizza or a burger. To them, a meal is an opportunity to one-up everyone else with their culinary adventures. It's as if they think they're the Indiana Jones of the dining world, and we're just bystanders in their quest for the perfect avocado toast. In the end, foodies are like the food snobs who turn every meal into a Michelin-starred spectacle, leaving the rest of us with indigestion and a burning desire for a good old-fashioned PB&J sandwich. Give me a break!"
+      ]
+      
+  },
+  {
+    "id": 14,
+    "name": "The Gamer",
+    "description": "Lives in a virtual world, unable to handle real-life challenges. Fails miserably in physical activities and social interactions.",
+    "advantage": "Strategic thinker, excels in virtual challenges.",
+    "disadvantage": "Less effective in physical and outdoor activities.",
+    "image": "https://i.postimg.cc/rqb31YqY/14.webp",
+    "power":0,
+    "rant": [
+      "The gamers, the absolute worst subculture in America, and quite possibly the entire world. These individuals have managed to turn the innocent act of playing video games into a lifestyle that's more toxic than a barrel of radioactive waste. First of all, they're like nocturnal creatures, emerging from their dark, dingy gaming caves only to raid the fridge for energy drinks and snack on a diet that consists solely of chips and pizza rolls. It's like they have an aversion to vegetables and sunlight, which probably explains their pasty complexions and lack of any discernible muscle tone.",
+      "But it's not just their hermit-like existence that makes gamers insufferable; it's their complete and utter obsession with virtual worlds. They'll spend hours upon hours grinding away in games, leveling up imaginary characters and collecting virtual loot as if it's some kind of achievement. Meanwhile, the real world passes them by, and they wonder why they can't hold down a job or maintain a meaningful relationship. And don't even get me started on their constant online battles and trash-talking. It's like they've turned the internet into a digital gladiator arena where they spew insults and threats with the grace and eloquence of a toddler having a temper tantrum.",
+      "And let's not forget their bizarre sense of entitlement. Gamers will demand that developers cater to their every whim and tantrum, as if they're the only ones who matter in the gaming industry. They'll rage and froth at the mouth over the slightest changes or perceived injustices in their favorite games, as if their lives depended on it. It's as if they believe that the fate of the universe hinges on the balance of power in a virtual realm. In the end, gamers are like the lost souls of society, trapped in a never-ending cycle of pixelated fantasies and rage-induced meltdowns. It's enough to make you question the sanity of anyone who willingly associates with this dreadful subculture."
+      ]
+  },
+  {
+    "id": 15,
+    "name": "The Bookworm",
+    "description": "An impractical dreamer lost in books, useless in fast-paced, real-world scenarios. Lacks physical prowess and practical skills.",
+    "advantage": "Wise and well-informed, good at planning.",
+    "disadvantage": "Physically less active, struggles in fast-paced scenarios.",
+    "image": "https://i.postimg.cc/2r0P6SMY/15.webp",
+    "power":0,
+    "rant": [
+      "The bookworms, those insufferable creatures lurking in the dusty corners of libraries and bookstores across America. These folks have a unique talent for turning what should be a peaceful and solitary pursuit into a never-ending nightmare of literary snobbery. They'll look down upon you with disdain if you dare to mention enjoying a bestseller or heaven forbid, a popular romance novel. To them, reading anything other than obscure, pretentious literature is a cardinal sin.",
+      "But it's not just their elitist attitude that makes bookworms the worst. It's their obsession with collecting books to the point where their homes resemble hoarder's paradise. They'll proudly boast about having read every book by an obscure 18th-century French philosopher while neglecting basic life responsibilities like paying bills or cleaning their cluttered living spaces. And let's not even get started on their condescending book recommendations. You ask for a light, enjoyable read, and they'll hand you a 1,000-page Russian novel filled with unpronounceable character names and philosophical musings.",
+      "And don't even think about interrupting a bookworm in the middle of their reading. They'll shoot you a glare that could turn Medusa to stone and shush you louder than a librarian during finals week. It's as if they believe they have a monopoly on quiet spaces and that the world should revolve around their reading habits. So, beware of the bookworms, those self-appointed guardians of literature who will make you question if reading is even worth the trouble. Give me a break!"
+      ]
+  },
+  {
+    "id": 16,
+    "name": "The Doomsday Prepper",
+    "description": "A paranoid hoarder preparing for an apocalypse that'll never come. Ineffective in normal, peaceful situations and socially awkward.",
+    "advantage": "Resilient in crisis, good at resource management.",
+    "disadvantage": "Paranoid, struggles in peaceful and cooperative settings.",
+    "image": "https://i.postimg.cc/fw9FBjLW/16.webp",
+    "power":0,
+    "rant":[
+      
+    ]
+  },
+  {
+    "id": 17,
+    "name": "The Political Junkie",
+    "description": "A divisive debater, more interested in arguing than solving real problems. Struggles to function outside their political bubble.",
+    "advantage": "Skilled in negotiation and influence.",
+    "disadvantage": "Can be divisive, struggles in apolitical scenarios.",
+    "image": "https://i.postimg.cc/kJPHZ66Q/17.webp",
+    "power":0,
+    "rant": [
+      "The Doomsday Preppers, the champions of overreacting and paranoia in American subcultures. These folks have taken the idea of preparing for the worst to a whole new level of absurdity. They stockpile canned goods and survival gear like they're preparing for the zombie apocalypse, even though the chances of such a scenario are about as likely as finding a unicorn in your backyard.",
+      "But it's not just their excessive hoarding of supplies that makes Doomsday Preppers the worst. It's their constant fearmongering and insistence that the end of the world is imminent. You can't have a conversation with one of them without them launching into a tirade about how society is on the brink of collapse, and we all need to be ready for Armageddon. It's like they're auditioning for a role in a low-budget apocalyptic movie, and they're the only ones who didn't get the memo that it's all make-believe.",
+      "And let's not forget their elaborate bunkers and doomsday shelters. These things are like the Taj Mahal of paranoia. They spend thousands of dollars on building underground fortresses with enough canned food to last a lifetime, all while ignoring the fact that the most likely threat they'll face is a power outage during a thunderstorm. It's as if they've watched too many post-apocalyptic movies and can't distinguish fiction from reality. In the end, Doomsday Preppers are like the doomsday clock itself - constantly ticking away, but ultimately just a source of unnecessary stress and anxiety. Give me a break!"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "The Vintage Collector",
+    "description": "Obsessed with outdated junk, unable to cope with modernity. Struggles with technology and anything post-1980s.",
+    "advantage": "Unique and rare item acquisition skills.",
+    "disadvantage": "Struggles with modern and futuristic settings.",
+    "image": "https://i.postimg.cc/ZYTMbGL0/18.webp",
+    "power":0,
+    "rant":[
+      "The vintage collectors, the bane of practicality and common sense in American subcultures. These individuals have elevated the art of hoarding old junk to a whole new level. It's like they've made it their life's mission to accumulate dusty relics from bygone eras and display them in their homes like some sort of chaotic time capsule. You walk into their houses, and it's like a never-ending trip through a flea market nightmare. Who needs modern furniture when you can have a collection of mismatched, rickety chairs from the 1920s that creak and groan with every sit?",
+      "But it's not just the cluttered living spaces that make vintage collectors the worst. It's their obsession with nostalgia that borders on the absurd. They'll wax poetic about the good old days, even if they weren't alive during those times. Mention anything from the present, and you'll be met with a condescending sigh and a lecture on how things were so much better in the past. Apparently, nothing in the modern world can compare to a rusted typewriter or a collection of vintage soda bottles. Who needs smartphones and high-speed internet when you can have a rotary dial phone and dial-up connection?",
+      "And let's not forget their constant pursuit of rare and valuable vintage items. Vintage collectors will spend hours scouring antique shops, online auctions, and garage sales in the hopes of finding that elusive, one-of-a-kind treasure. It's like they've turned thrift shopping into a competitive sport, with a never-ending quest for that antique teapot or obscure 1950s cereal box. In the end, vintage collectors are like the eccentric aunts and uncles who show up at family gatherings with their collection of porcelain dolls and insist on sharing tedious stories about the history of each item. It's enough to make you wish you could time-travel back to a simpler era, just to escape their relentless nostalgia."
+      ]
+  },
+
     {
       "id": 19,
       "name": "The Otaku",
@@ -168,7 +258,12 @@
       "advantage": "Thinks they are skilled in Japanese language and culture.",
       "disadvantage": "Is really not.",
       "image": "https://i.postimg.cc/M60L86Vh/19.webp",
-      "power":0
+      "power":0,
+      "rant": [
+        "The otakus, the embodiment of obsessive and socially awkward behavior in American subcultures. These folks have taken their love for anime, manga, and all things Japanese to a whole new level of cringe. They'll spend hours upon hours in their dimly lit bedrooms, surrounded by walls covered in posters of scantily clad anime characters, speaking fluent Japanese (learned solely from watching anime, of course). It's like they believe they're one Naruto headband away from becoming a real ninja.",
+        "But it's not just their hermit-like lifestyle that makes otakus the worst. It's their complete detachment from reality. They'll argue vehemently about the power levels of fictional anime characters, as if Goku's Super Saiyan abilities have any real-world implications. Try engaging in a conversation with them about current events or popular culture, and you'll be met with a blank stare followed by an enthusiastic rant about their waifu or husbando. It's as if they've built a fortress of fantasy to shield themselves from the real world.",
+        "And let's not forget their fashion choices – or lack thereof. Otakus often sport questionable clothing combinations that make them look like they raided a thrift store in Akihabara. Wearing cat ears and tails in public is considered a fashion statement, and don't be surprised if you see them wearing a body pillow with a printed anime character as if it's a high-end accessory. In the end, otakus are like the socially awkward cousins who show up at family gatherings and make everyone cringe with their over-the-top anime references and a complete disconnection from the real world. It's time for them to log off and step into the sunlight."
+      ]
     },
     {
       "id": 20,
@@ -177,7 +272,12 @@
       "advantage": "Skilled in audio production, excellent communication skills.",
       "disadvantage": "Tends to be overly critical of critics.",
       "image": "",
-      "power": 0
+      "power": 0,
+      "rant":[
+        "The podcasters, the self-proclaimed audio intellectuals of the digital age. These individuals have turned talking into a full-blown subculture, and it's a painful spectacle to witness. They act as if they're the modern-day Socrates, dispensing wisdom to the masses through their mundane conversations about everything from the art of folding laundry to the deep philosophical musings on the proper way to tie shoelaces.",
+        "But what's truly infuriating about podcasters is their unwavering belief that everyone wants to listen to their unfiltered thoughts for hours on end. They'll drone on and on, completely oblivious to the fact that the world doesn't revolve around their latest episode. And the worst part? They think they're changing the world, one overly verbose monologue at a time. Newsflash, podcasters, your ramblings about conspiracy theories and the secret world of knitting aren't exactly groundbreaking journalism.",
+        "And let's not forget their insistence on dragging their friends and family into their podcasting ventures. Suddenly, your cousin Jerry, who couldn't hold a conversation at Thanksgiving dinner, becomes the co-host of 'The Jerry and Friends Podcast.' It's like a bad sitcom where the cast is made up of people who have no business being behind a microphone. So, if you ever find yourself trapped in a conversation with a podcaster, brace yourself for a never-ending journey into the depths of their overinflated egos and mediocre storytelling."
+        ]
     },{
       "id": 21,
       "name": "The Family Vlogger",
@@ -185,6 +285,11 @@
       "advantage": "High online visibility, potential for sponsorship deals, constant validation.",
       "disadvantage": "Strained family relationships, loss of privacy, criticism from viewers, exploitation of minors.",
       "image": "",
-      "power": 0
+      "power": 0,
+      "rant": [
+        "The family vloggers, the epitome of modern-day narcissism masked as wholesome content. These individuals have turned their personal lives into a never-ending reality show that we never signed up for. It's like they believe that sharing every mundane moment of their existence, from breakfast cereal choices to the color of their socks, is somehow riveting entertainment. Spoiler alert: it's not!",
+        "But it's not just the incessant oversharing that makes family vloggers the worst. It's the exploitation of their own children for views and likes. They parade their offspring in front of the camera, capturing their most vulnerable moments, all in the name of 'family bonding.' Is it really quality time if you're constantly shoving a camera in your child's face and making their every tantrum a viral sensation?",
+        "And let's not forget the cringe-worthy family challenges and pranks that these vloggers subject their loved ones to. From pretending to be kidnapped to drenching each other with buckets of slime, it's as if they're competing for the 'Most Embarrassing Family' award. It's not cute; it's just a sad attempt to stay relevant in the oversaturated world of online content. So, next time you find yourself falling down the rabbit hole of a family vlogger's YouTube channel, just remember that you're wasting precious minutes of your life on a glorified home video of people who are desperately trying to make their ordinary lives seem extraordinary."
+      ]
     }
 ]

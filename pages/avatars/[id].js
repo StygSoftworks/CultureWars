@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout';
 import React from 'react';
 import Image from 'next/image';
+import { createCanvas, loadImage } from 'canvas';
 
 // Load avatars.json and cache it
 const avatarsData = require('../../public/json/avatars.json');
@@ -13,10 +14,42 @@ const AvatarDetail = ({ avatarData }) => {
     return <div>Loading...</div>;
   }
 
-  const { name, description, advantage, disadvantage, image, power } = avatarData;
+  //Function to print the card
+  const exportToPng = async () => {
+    try {
+      
+
+      const response = await fetch(`${process.env.BASE_URL}/../../api/pngAvatarExport?avatarId=${avatarData.id}`);
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', `${avatarData.name.replace(/\s/g, '-')}.png`);
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode.removeChild(link);
+
+
+
+
+
+    } catch (err) {
+      console.error('oops, something went wrong!', err);
+    }
+  };
+
+  const { name, description, advantage, disadvantage, image, power, rant } = avatarData;
 
   return (
     <Layout>
+
+
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Changed background color */}
 
         { <center>
@@ -35,13 +68,22 @@ const AvatarDetail = ({ avatarData }) => {
           <p className="text-gray-800 text-base">{description}</p> {/* Changed text color */}
         </div>
         <div className="px-6 py-4">
-        <span className="inline-block bg-yellow-200 rounded-full px-3 py-1 text-sm font-semibold text-yellow-700 mr-2">Power:{power}</span> {/* Changed badge colors */}
+        <span className="inline-block bg-yellow-200 rounded-full px-3 py-1 text-sm font-semibold text-yellow-700 mr-2">Power: {power}</span> {/* Changed badge colors */}
         </div>
         <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-green-700 mr-2">Advantage:{advantage}</span> {/* Changed badge colors */}
+          <span className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-green-700 mr-2">Advantage: {advantage}</span> {/* Changed badge colors */}
         </div>
         <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-red-700 mr-2">Disadvantage:{disadvantage}</span> {/* Changed badge colors */}
+          <span className="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-red-700 mr-2">Disadvantage: {disadvantage}</span> {/* Changed badge colors */}
+        </div>
+
+        <div className="px-6 pt-4 pb-2">
+
+          {/* paragraph for each rant */}
+          {rant.map((rant, index) => (
+            <p key={index} className="text-gray-700 text-base">{rant}</p>
+          ))}
+
         </div>
 
         {/* Add a Next link to the previous avatar and the next avatar */}
@@ -58,6 +100,15 @@ const AvatarDetail = ({ avatarData }) => {
           >
             Next Avatar
           </a>
+        </div>
+
+        {/* Print card Button */}
+        <div className="px-6 py-4">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={exportToPng}
+          >
+            Print Card
+          </button>
         </div>
 
 
