@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout';
 import React from 'react';
 import Image from 'next/image';
-import { createCanvas, loadImage } from 'canvas';
+
 
 // Load avatars.json and cache it
 const avatarsData = require('../../public/json/avatars.json');
