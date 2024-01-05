@@ -4,12 +4,6 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import NextImage from 'next/image';
 
-// Dynamic import for Fabric.js to ensure it loads on client-side
-const FabricCanvas = dynamic(
-  () => import('../../components/FabricCanvas'), // Adjust the path as per your directory structure
-  { ssr: false }
-);
-
 // Load avatars.json
 const avatarsData = require('../../public/json/avatars.json');
 
@@ -24,9 +18,6 @@ const AvatarDetail = ({ avatarData }) => {
   const handleDownloadClick = async () => {
     const WIDTH = 750;
     const HEIGHT = 1050;
-
-
-  
     console.log('avatarData.image', avatarData.image);
   
     // Load the image
@@ -87,7 +78,7 @@ const AvatarDetail = ({ avatarData }) => {
       ctx.font = 'bold 50px sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(`Disadvantage: ${avatarData.disadvantage}`, canvas.width / 2, picHeight + (5*picHeightOffset), canvas.width - (2*picWidthOffset), 50);
-      
+
       // Convert the canvas to a data URL
       const dataURL = canvas.toDataURL('image/png');
   
@@ -105,10 +96,6 @@ const AvatarDetail = ({ avatarData }) => {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* <div className="flex justify-between px-6 py-4">
-        <FabricCanvas avatarImage={image} />
-        </div> */}
 
         <div className="px-6 py-4">
           <NextImage  src={image} alt={name} width={750} height={1050} />
