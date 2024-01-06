@@ -46,6 +46,10 @@ const Layout = ({ children }) => {
                   <Link href={`/avatars/${avatar.id}`}>{avatar.name}</Link>
                 </DropdownItem>
               ))}
+
+              <DropdownItem className="hover:bg-gray-100 hover:text-gray-800 custom-dropdown-item">
+                <Link href="/avatars/printAvatars">Print Avatars</Link>
+              </DropdownItem>
             </DropdownSection>
           </DropdownMenu>
         </Dropdown>

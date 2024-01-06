@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout';
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import NextImage from 'next/image';
@@ -9,6 +9,7 @@ const avatarsData = require('../../public/json/avatars.json');
 
 const minId = Math.min(...avatarsData.map((avatar) => avatar.id));
 const maxId = Math.max(...avatarsData.map((avatar) => avatar.id));
+
 
 const AvatarDetail = ({ avatarData }) => {
   if (!avatarData) {
@@ -20,75 +21,89 @@ const AvatarDetail = ({ avatarData }) => {
     const HEIGHT = 1050;
     console.log('avatarData.image', avatarData.image);
   
+    // Create a canvas
+    const canvas = document.createElement('canvas');
+    canvas.width = WIDTH;
+    canvas.height = HEIGHT;
+    const ctx = canvas.getContext('2d');
+
+    // Pre-calculate values
+    const centerX = WIDTH / 2;
+    const textWidth = WIDTH - 100; // 100 is 2 * picWidthOffset
+    const picHeight = 300;
+    const picWidthOffset = 50;
+    const picHeightOffset = 50;
+
+    // Set common styles
+    ctx.fillStyle = '#000';
+    ctx.font = 'bold 50px sans-serif';
+    ctx.textAlign = 'center';
+
     // Load the image
     const image = new Image();
-    image.crossOrigin = 'Anonymous'; // Use this if the image is served from a different domain
-    image.src = avatarData.image;
-  
-    // Wait for the image to load
-    image.onload = () => {
-      // Create a canvas
-      const canvas = document.createElement('canvas');
-      canvas.width = WIDTH;
-      canvas.height = HEIGHT;
-      const ctx = canvas.getContext('2d');
-  
-      // Make the image all white
-      ctx.fillStyle = '#fff';
-      ctx.fillRect(0,0,WIDTH,HEIGHT);
+    image.crossOrigin = 'Anonymous';
+    image.src = `/images/avatars/${avatarData.id}.webp`;
 
-      //draw a rounded black rectangle border around the canvas
-      ctx.strokeStyle = '#000';
-      ctx.lineWidth = 10;
-      ctx.strokeRect(0, 0, WIDTH, HEIGHT);
+    try {
+        await new Promise((resolve, reject) => {
+            image.onload = resolve;
+            image.onerror = reject;
+        });
 
-      // Draw the image on the canvas
-      const picWidthX = 10;
-      const picWidthOffset = 50;
-      const picHeight = 300
-      const picHeightOffset = 50;
-      ctx.drawImage(image, picWidthOffset, picWidthX, canvas.width - (2*picWidthOffset), picHeight);
+        // Draw operations
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(0, 0, WIDTH, HEIGHT);
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = 20;
+        ctx.strokeRect(0, 0, WIDTH, HEIGHT);
+        ctx.drawImage(image, picWidthOffset, picWidthOffset, WIDTH - (2 * picWidthOffset), picHeight);
 
-      // Draw the name
-      ctx.fillStyle = '#000';
-      ctx.font = 'bold 50px sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText(avatarData.name, canvas.width / 2, picHeight + picHeightOffset, canvas.width - (2*picWidthOffset), 50);
+        //round the corners
+        ctx.beginPath();
+        ctx.moveTo(20, 0);
+        ctx.lineTo(WIDTH - 20, 0);
+        ctx.quadraticCurveTo(WIDTH, 0, WIDTH, 20);
+        ctx.lineTo(WIDTH, HEIGHT - 20);
+        ctx.quadraticCurveTo(WIDTH, HEIGHT, WIDTH - 20, HEIGHT);
+        ctx.lineTo(20, HEIGHT);
+        ctx.quadraticCurveTo(0, HEIGHT, 0, HEIGHT - 20);
+        ctx.lineTo(0, 20);
+        ctx.quadraticCurveTo(0, 0, 20, 0);
+        ctx.closePath();
+        ctx.clip();
 
-      // Draw the description
-      ctx.fillStyle = '#000';
-      ctx.font = 'bold 50px sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText(avatarData.description, canvas.width / 2, picHeight + (2*picHeightOffset), canvas.width - (2*picWidthOffset), 50);
-  
-      // Draw the power
-      ctx.fillStyle = '#000';
-      ctx.font = 'bold 50px sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText(`Power: ${avatarData.power}`, canvas.width / 2, picHeight + (3*picHeightOffset), canvas.width - (2*picWidthOffset), 50);
+        // Set common styles
+        ctx.fillStyle = '#000';
+        ctx.font = 'bold 50px sans-serif';
+        ctx.textAlign = 'center';
+        const drawText = (text, yOffset) => {
+            ctx.fillText(text, centerX, picHeight + yOffset, textWidth);
+        };
 
-      // Draw the advantage
-      ctx.fillStyle = '#000';
-      ctx.font = 'bold 50px sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText(`Advantage: ${avatarData.advantage}`, canvas.width / 2, picHeight + (4*picHeightOffset), canvas.width - (2*picWidthOffset), 50);
 
-      // Draw the disadvantage
-      ctx.fillStyle = '#000';
-      ctx.font = 'bold 50px sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText(`Disadvantage: ${avatarData.disadvantage}`, canvas.width / 2, picHeight + (5*picHeightOffset), canvas.width - (2*picWidthOffset), 50);
+        const picStartY = 100 ;
+        drawText(avatarData.name,picStartY+ picHeightOffset);
+        drawText(avatarData.description, picStartY+ (2 * picHeightOffset));
+        drawText(`Power: ${avatarData.power}`,picStartY+  (3 * picHeightOffset));
+        drawText(`Advantage: ${avatarData.advantage}`, picStartY+ (4 * picHeightOffset));
+        drawText(`Disadvantage: ${avatarData.disadvantage}`, picStartY+ (5 * picHeightOffset));
 
-      // Convert the canvas to a data URL
-      const dataURL = canvas.toDataURL('image/png');
-  
-      // Creating a link to trigger download
-      const link = document.createElement('a');
-      link.download = `${avatarData.name.replace(/\s/g, '-')}.png`;
-      link.href = dataURL;
-      link.click();
-    };
-  };
+        // Convert the canvas to a data URL
+        const dataURL = canvas.toDataURL('image/png');
+
+        // Creating a link to trigger download
+        const link = document.createElement('a');
+        link.download = `${avatarData.name.replace(/\s/g, '-')}.png`;
+        link.href = dataURL;
+        document.body.appendChild(link); // Append to body to ensure visibility in some browsers
+        link.click();
+        document.body.removeChild(link); // Remove the link after clicking
+
+    } catch (error) {
+        console.error("Error loading image:", error);
+    }
+};
+
   
 
   const { name, description, advantage, disadvantage, image, power, rant } = avatarData;
