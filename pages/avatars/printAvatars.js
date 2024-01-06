@@ -66,9 +66,23 @@ const AvatarPdfMaker = () => {
                 doc.line(x + 60+2., y + 85-7.5, x + 55+2., y + 80-7.5);
                 doc.line(x + 55+2., y + 80-7.5, x + 60+2., y + 75-7.5);
 
+
+
+                //write the advantage and disadvantage
+                doc.setFontSize(8);
+                //set the color to green
+                doc.setTextColor(0, 128, 0);
+                //doc.text(avatar.advantage, x + 12, y + 71);
+                //set the color to red
+                doc.setTextColor(255, 0, 0);
+                //doc.text(avatar.disadvantage, x + 12, y + 76);
+
+
                 //set the color to black
                 doc.setTextColor(0, 0, 0);
                 doc.setDrawColor(0, 0, 0);
+
+
 
 
                 
