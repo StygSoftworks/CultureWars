@@ -49,8 +49,6 @@ const AvatarPdfMaker = () => {
                 doc.addImage(image, "JPEG", x + 15, y + 15, 50, 50);
 
                 //put the power to the bottom right corner which is a number
-                
-
                 doc.setFontSize(20);
                 //set the color to orange
                 doc.setTextColor(255, 165, 0);
@@ -66,10 +64,8 @@ const AvatarPdfMaker = () => {
                 doc.line(x + 60+2., y + 85-7.5, x + 55+2., y + 80-7.5);
                 doc.line(x + 55+2., y + 80-7.5, x + 60+2., y + 75-7.5);
 
-
-
                 //write the advantage and disadvantage
-                doc.setFontSize(8);
+                doc.setFontSize(7);
                 //set the color to green
                 doc.setTextColor(0, 128, 0);
                 //doc.text(avatar.advantage, x + 12, y + 71);
@@ -81,17 +77,6 @@ const AvatarPdfMaker = () => {
                 //set the color to black
                 doc.setTextColor(0, 0, 0);
                 doc.setDrawColor(0, 0, 0);
-
-
-
-
-                
-
-                // Wrap a border around the avatar
-                //doc.rect(x + 10, y + 5, 60, 75);
-
-                
-
 
                 // Increment the x position
                 x += 65;

@@ -106,16 +106,16 @@ const AvatarDetail = ({ avatarData }) => {
 
   
 
-  const { name, description, advantage, disadvantage, image, power, rant } = avatarData;
+  const { name, description, advantage, disadvantage, image, power, rant, id } = avatarData;
 
   return (
     <Layout>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="px-6 py-4">
-          <NextImage  src={image} alt={name} width={750} height={1050} />
+          <NextImage  src={`/images/avatars/${avatarData.id}.webp`} alt={name} width={750} height={1050} />
 
-          <button onClick={handleDownloadClick}>Download</button>
+          {/* <button onClick={handleDownloadClick}>Download</button> */}
         </div>
 
 
