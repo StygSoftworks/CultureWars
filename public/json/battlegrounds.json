@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "name": "4chan",
+        "description": "Inconsequential schizo shitposting between edgelords",
+        "effects": "All discord mods don't untap during their next untap step"
+    },
+
+    {
+        "id": 2,
+        "name": "Reddit",
+        "description": "Where Ideas Disconnect, Communities Wither",
+        "effects": "All rolls are made at a disadvantage"
+    }
+]

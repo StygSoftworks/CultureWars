@@ -56,12 +56,18 @@ const Layout = ({ children }) => (
       <div className="max-w-screen-lg mx-auto flex justify-between items-center">
         <div className="text-xl">
           <Link href="/">Home</Link>
+        
         </div>
         <ul className="flex items-center list-none p-0">
           {['/viewcards', '/rules', '/about'].map((path, index) => (
             <NavLink key={index} path={path} />
           ))}
-          <li><AvatarDropdown /></li>
+          <li className="mr-5"><AvatarDropdown /></li>
+          <li className="mr-5">
+            <Link href="/battlegrounds/battlegrounds">
+              Battlegrounds
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
