@@ -11,5 +11,113 @@
         "name": "Reddit",
         "description": "Where Ideas Disconnect, Communities Wither",
         "effects": "All rolls are made at a disadvantage"
-    }
+    },
+    
+        {
+            "id": 3,
+            "name": "Political Ideologies",
+            "type": "Political",
+            "description": "Controversies related to various political ideologies, policies, and elections that often lead to clashes between liberals, conservatives, libertarians, and other political groups.",
+            "effects": ""
+        },
+        {
+            "id": 4,
+            "name": "Religious Freedom",
+            "type": "Religious Beliefs",
+            "description": "Debates and conflicts related to issues concerning religious freedom, separation of church and state, and moral values.",
+            "effects": ""
+        },
+        {
+            "id": 5,
+            "name": "Racial Inequality",
+            "type": "Race and Ethnicity",
+            "description": "Controversies surrounding racial inequality, racial profiling, and cultural appropriation within American society.",
+            "effects": ""
+        },
+        {
+            "id": 6,
+            "name": "LGBTQ+ Rights",
+            "type": "Gender and Sexuality",
+            "description": "Ongoing battles for LGBTQ+ rights, gender equality, and debates around reproductive rights.",
+            "effects": ""
+        },
+        {
+            "id": 7,
+            "name": "Generational Differences",
+            "type": "Generational",
+            "description": "Conflicts between Baby Boomers, Generation X, Millennials, and Generation Z on issues like technology, work ethics, and social norms.",
+            "effects": ""
+        },
+        {
+            "id": 8,
+            "name": "Income Inequality",
+            "type": "Social Classes",
+            "description": "Contentious debates over income inequality, access to education and healthcare, and taxation policies.",
+            "effects": ""
+        },
+        {
+            "id": 9,
+            "name": "Technology in Society",
+            "type": "Technology and Digital Culture",
+            "description": "Concerns about privacy, online harassment, and the role of technology in society as sources of division.",
+            "effects": ""
+        },
+        {
+            "id": 10,
+            "name": "Representation in Video Games",
+            "type": "Gaming and Geek Culture",
+            "description": "Disagreements over representation in video games, gatekeeping, and controversies within online gaming communities.",
+            "effects": ""
+        },
+        {
+            "id": 11,
+            "name": "Culinary Choices",
+            "type": "Food and Culinary Preferences",
+            "description": "Debates over dietary choices, food sourcing, and cultural appropriation in the culinary world as sources of contention.",
+            "effects": ""
+        },
+        {
+            "id": 12,
+            "name": "Climate Change",
+            "type": "Environmentalism",
+            "description": "Disagreements over climate change, conservation efforts, and environmental policies as sources of conflict.",
+            "effects": ""
+        },
+        {
+            "id": 13,
+            "name": "Music Genres",
+            "type": "Music and Subcultural Movements",
+            "description": "Controversies related to music genres, subcultures (e.g., punk, hip-hop), and controversies within the music industry.",
+            "effects": ""
+        },
+        {
+            "id": 14,
+            "name": "Sports Rivalries",
+            "type": "Sports Fandom",
+            "description": "Rivalries between sports teams' fanbases and debates over athlete activism as sources of conflict.",
+            "effects": ""
+        },
+        {
+            "id": 15,
+            "name": "Artistic Freedom",
+            "type": "Art and Expression",
+            "description": "Issues like censorship, artistic freedom, and cultural appropriation in the world of art and entertainment as sources of division.",
+            "effects": ""
+        },
+        {
+            "id": 16,
+            "name": "Academic Freedom",
+            "type": "Education and Academic Freedom",
+            "description": "Debates over curriculum content, campus politics, and academic freedom as sources of conflict within education.",
+            "effects": ""
+        },
+        {
+            "id": 17,
+            "name": "Healthcare Policies",
+            "type": "Health and Wellness",
+            "description": "Contentious controversies related to healthcare policies, access, and debates over healthcare reform.",
+            "effects": ""
+        }
+    
+    
 ]
