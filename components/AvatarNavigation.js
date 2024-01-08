@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 function AvatarNavigation({ prevAvatar, nextAvatar }) {
+  const router = useRouter();
+
+  // Function to handle key press events
+  const handleKeyPress = (event) => {
+    if (event.key === 'ArrowLeft') {
+      // Navigate to the previous avatar
+      router.push(`/avatars/${prevAvatar.id}`);
+    } else if (event.key === 'ArrowRight') {
+      // Navigate to the next avatar
+      router.push(`/avatars/${nextAvatar.id}`);
+    }
+  };
+
+  // Set up the key press event listener
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [prevAvatar, nextAvatar, router]);
+
   return (
     <div className='flex content-center'>
       <div>

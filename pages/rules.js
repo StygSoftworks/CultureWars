@@ -5,7 +5,7 @@ export default function Rules() {
   return (
     <Layout>
  
- <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 jolly-lodger">
         <div className="bg-white shadow-md rounded p-6">
           <h1 className="text-3xl font-bold mb-4">Culture Wars Game Mechanics</h1>
           

@@ -25,3 +25,36 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* JollyLodger-Regular */
+@font-face {
+  font-family: 'JollyLodger';
+  src: url('/fonts/JollyLodger-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.jolly-lodger {
+  font-family: 'JollyLodger', sans-serif;
+}
+
+/* LuckiestGuy-Regular */
+@font-face {
+  font-family: 'Luckiest Guy';
+  src: url('/fonts/LuckiestGuy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.luckiest-guy {
+  font-family: 'Luckiest Guy', sans-serif;
+}
+
+/* PressStart2P-Regular */
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('/fonts/PressStart2P-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.press-start-2p {
+  font-family: 'PressStart2P', sans-serif;
+}

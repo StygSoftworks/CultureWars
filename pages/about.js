@@ -8,21 +8,16 @@ const About = () => {
   return (
     <Layout>
 
-      <main>
-        <h1>About Us</h1>
+      <main className='jolly-lodger'>
+        <h1>Welcome to Culture Wars!</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at
-          magna nec quam luctus fermentum. Vivamus eget nisi ut lectus bibendum
-          placerat. Sed vitae vestibulum risus, a suscipit justo.
+          At Culture Clash Games, we believe in gaming that's as witty as it is engaging. 'Culture Wars' is our latest venture—a card game that dives headfirst into the cesspool of American subcultures.
         </p>
         <p>
-          Integer vel libero at ipsum fermentum euismod ac in arcu. Sed nec
-          egestas leo. Praesent malesuada diam non erat tristique, non venenatis
-          justo tincidunt.
+          We are committed to creating a game that is inclusively insulting and fun.
         </p>
         <p>
-          Fusce auctor, ex at vehicula tincidunt, justo tellus tincidunt dui, ut
-          pharetra neque justo vel ligula.
+        We invite you to be a part of our journey. Whether you're a hardcore gamer or just looking for a fun night with friends, 'Culture Wars' is sure to delight. Stay tuned for updates, expansions, and new game releases from Culture Clash Games.
         </p>
       
       </main>

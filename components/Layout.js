@@ -26,20 +26,20 @@ const AvatarDropdown = () => {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button color="primary" variant="solid" className="capitalize">
+        <Button color="primary" variant="solid" className="capitalize ">
           Avatars
         </Button>
       </DropdownTrigger>
-      <DropdownMenu className="bg-white shadow-lg custom-dropdown">
+      <DropdownMenu className="bg-white shadow-lg custom-dropdown ">
         <DropdownSection>
           {sortedAvatars.map((avatar) => (
-            <DropdownItem key={avatar.id} className="hover:bg-gray-100 hover:text-gray-800 custom-dropdown-item">
+            <DropdownItem key={avatar.id} className="hover:bg-gray-100 hover:text-gray-800 custom-dropdown-item jolly-lodger">
               <Link href={`/avatars/${avatar.id}`}>
                 {avatar.name}
               </Link>
             </DropdownItem>
           ))}
-          <DropdownItem className="hover:bg-gray-100 hover:text-gray-800 custom-dropdown-item">
+          <DropdownItem className="hover:bg-gray-100 hover:text-gray-800 custom-dropdown-item jolly-lodger">
             <Link href="/avatars/printAvatars">
               Print Avatars
             </Link>
@@ -52,7 +52,7 @@ const AvatarDropdown = () => {
 
 const Layout = ({ children }) => (
   <div>
-    <nav className="bg-gray-800 text-white py-2">
+    <nav className="bg-gray-800 text-white py-2 jolly-lodger">
       <div className="max-w-screen-lg mx-auto flex justify-between items-center">
         <div className="text-xl">
           <Link href="/">Home</Link>

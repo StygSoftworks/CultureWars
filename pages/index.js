@@ -16,13 +16,13 @@ export default function Home() {
           height={200}
         />
       </div>
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">
+      <h1 className="text-4xl font-bold text-gray-800 mb-4 jolly-lodger">
         Welcome to Culture Wars!
       </h1>
-      <p className="text-lg text-gray-600 mb-8">
+      <p className="text-lg text-gray-600 mb-8 jolly-lodger">
         The most sarcastic and tongue-in-cheek trading card game ever.
       </p>
-      <p className="text-gray-700 text-xl mb-8">
+      <p className="text-gray-700 text-xl mb-8 jolly-lodger">
         Do you have what it takes to mock, ridicule, and outwit your opponents?
       </p>
     </main>
