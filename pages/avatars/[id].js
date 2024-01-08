@@ -66,10 +66,12 @@ const AvatarDetail = ({ avatarData }) => {
             <p key={index} className="text-gray-700 text-base">{rant}</p>
           ))}
         </div>
+
+
+    
         <div className="flex justify-between px-6 py-4">
 
           <AvatarNavigation prevAvatar={prevAvatar} nextAvatar={nextAvatar} />
-          
         </div>
         
       </div>
