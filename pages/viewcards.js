@@ -26,7 +26,7 @@ const ViewCards = () => {
 
   return (
     <Layout>
-      <main>
+      <main className="p-8 roboto">
         <h1 className="text-2xl font-bold">View Cards</h1>
 
             {/* Link to create a new Card */}

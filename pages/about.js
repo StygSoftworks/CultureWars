@@ -8,7 +8,7 @@ const About = () => {
   return (
     <Layout>
 
-      <main className='jolly-lodger'>
+      <main className='robato'>
         <h1>Welcome to Culture Wars!</h1>
         <p>
           At Culture Clash Games, we believe in gaming that's as witty as it is engaging. 'Culture Wars' is our latest venture—a card game that dives headfirst into the cesspool of American subcultures.
