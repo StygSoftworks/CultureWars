@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import avatarsData from '../../public/json/avatars.json';
-import AvatarNavigation from '../../components/AvatarNavigation';
+import LinkPrevNextNavigation from '../../components/LinkPrevNextNavigation';
 
 const AvatarDetail = ({ avatarData }) => {
   if (!avatarData) {
@@ -17,6 +17,10 @@ const AvatarDetail = ({ avatarData }) => {
       const prevAvatar = sortedAvatars[currentIndex - 1] || sortedAvatars[sortedAvatars.length - 1];
       const nextAvatar = sortedAvatars[currentIndex + 1] || sortedAvatars[0];
   
+      const webUrlBase = '/avatars/';
+      prevAvatar.url = webUrlBase + prevAvatar.id.toString();
+      nextAvatar.url = webUrlBase + nextAvatar.id.toString();
+
       return { prevAvatar, nextAvatar };
     };
   
@@ -26,7 +30,7 @@ const AvatarDetail = ({ avatarData }) => {
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 roboto">
 
         <div className="px-6 py-4">
           <NextImage  src={`/images/avatars/${avatarData.id}.webp`} alt={name} width={750} height={1050} />
@@ -52,7 +56,7 @@ const AvatarDetail = ({ avatarData }) => {
         </div>
     
         <div className="px-6 py-4">
-          <AvatarNavigation prevAvatar={prevAvatar} nextAvatar={nextAvatar} />
+          <LinkPrevNextNavigation prevEntry={prevAvatar} nextEntry={nextAvatar} />
         </div>
         
       </div>

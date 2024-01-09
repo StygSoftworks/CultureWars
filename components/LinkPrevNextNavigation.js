@@ -2,17 +2,17 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-function AvatarNavigation({ prevAvatar, nextAvatar }) {
+function LinkPrevNextNavigation({ prevEntry, nextEntry }) {
   const router = useRouter();
 
   // Function to handle key press events
   const handleKeyPress = (event) => {
     if (event.key === 'ArrowLeft') {
       // Navigate to the previous avatar
-      router.push(`/avatars/${prevAvatar.id}`);
+      router.push(`${prevEntry.id}`);
     } else if (event.key === 'ArrowRight') {
       // Navigate to the next avatar
-      router.push(`/avatars/${nextAvatar.id}`);
+      router.push(`${nextEntry.id}`);
     }
   };
 
@@ -24,13 +24,13 @@ function AvatarNavigation({ prevAvatar, nextAvatar }) {
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
-  }, [prevAvatar, nextAvatar, router]);
+  }, [prevEntry, nextEntry, router]);
 
   return (
-    <div className='flex content-center'>
+    <div className='mb-4 flex justify-end'>
       <div>
-        <Link href={`/avatars/${prevAvatar.id}`}>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+        <Link href={`${prevEntry.url}`}>
+          <span className="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-red-700 hover:bg-red-300 hover:text-red-800 cursor-pointer">
             <span>Previous</span>
             <svg className="fill-current w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
               <g id="previous-icon">
@@ -42,8 +42,8 @@ function AvatarNavigation({ prevAvatar, nextAvatar }) {
         </Link>
       </div>
       <div>
-        <Link href={`/avatars/${nextAvatar.id}`}>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+        <Link href={`${nextEntry.url}`}>
+          <span className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-green-700 hover:bg-green-300 hover:text-green-800 cursor-pointer">
             <span>Next</span>
             <svg className="fill-current w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
               <g id="next-icon">
@@ -58,4 +58,4 @@ function AvatarNavigation({ prevAvatar, nextAvatar }) {
   );
 }
 
-export default AvatarNavigation;
+export default LinkPrevNextNavigation;

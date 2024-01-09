@@ -112,7 +112,7 @@ const AvatarPdfMaker = () => {
 
     return (
         <Layout>
-            <main className="flex flex-col items-center justify-center p-8 text-center">
+            <main className="flex flex-col items-center justify-center p-8 text-center roboto">
                 <h1 className="text-4xl font-bold text-gray-800 mb-4">
                     Print Avatars
                 </h1>

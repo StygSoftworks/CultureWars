@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from '../../components/Layout';
 import battlegrounds from '../../public/json/battlegrounds.json';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/solid';
-
+import Link from 'next/link';
 const BattlegroundIndex = () => {
   const [filteredBattlegrounds, setFilteredBattlegrounds] = useState([]);
   const [sortDirection, setSortDirection] = useState('asc');
@@ -17,7 +17,9 @@ const BattlegroundIndex = () => {
 
   const handleFilter = (filterText) => {
     const filteredData = battlegrounds.filter((battleground) =>
-      battleground.name.toLowerCase().includes(filterText.toLowerCase())
+      Object.values(battleground).some((value) =>
+        value.toString().toLowerCase().includes(filterText.toLowerCase())
+      )
     );
     setFilteredBattlegrounds(filteredData);
   };
@@ -49,12 +51,12 @@ const BattlegroundIndex = () => {
 
   return (
     <Layout>
-      <main className="p-8 text-center">
+      <main className="p-8 roboto">
         <h1 className="text-2xl font-semibold mb-4">Battlegrounds</h1>
-        <div className="mb-4">
+        <div className="mb-4 flex justify-end">
           <input
             type="text"
-            placeholder="Filter by name..."
+            placeholder="Filter for..."
             onChange={(e) => handleFilter(e.target.value)}
             className="px-2 py-1 border rounded-md"
           />
@@ -63,17 +65,25 @@ const BattlegroundIndex = () => {
           <table className="min-w-full table-auto">
             <thead>
               <tr>
-                <th
+                {/* <th
                   className="px-4 py-2 cursor-pointer"
                   onClick={() => handleSort('id')}
                 >
                   ID {renderSortIcon('id')}
-                </th>
+                </th> */}
                 <th
                   className="px-4 py-2 cursor-pointer"
                   onClick={() => handleSort('name')}
                 >
                   Name {renderSortIcon('name')}
+                </th>
+
+                {/* type */}
+                <th
+                  className="px-4 py-2 cursor-pointer"
+                  onClick={() => handleSort('type')}
+                >
+                  Type {renderSortIcon('type')}
                 </th>
                 <th
                   className="px-4 py-2 cursor-pointer"
@@ -92,8 +102,16 @@ const BattlegroundIndex = () => {
             <tbody>
               {filteredBattlegrounds.map((battleground) => (
                 <tr key={battleground.id}>
-                  <td className="border px-4 py-2">{battleground.id}</td>
-                  <td className="border px-4 py-2">{battleground.name}</td>
+                  {/* <td className="border px-4 py-2">{battleground.id}</td> */}
+
+                  <td className="p-1">
+                      {/* Use Link to navigate to the CardDetail page */}
+                      <Link href={`/battlegrounds/${battleground.id}`  }>
+                        <span className='text-blue-500 hover:underline cursor-pointer'>{battleground.name} </span>
+                      </Link>
+                    </td>
+                  {/* <td className="border px-4 py-2">{battleground.name}</td> */}
+                  <td className="border px-4 py-2">{battleground.type}</td>
                   <td className="border px-4 py-2">{battleground.description}</td>
                   <td className="border px-4 py-2">{battleground.effects}</td>
                 </tr>
