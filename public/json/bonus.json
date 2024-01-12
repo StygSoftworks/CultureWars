@@ -1,0 +1,13 @@
+[
+
+    
+        {
+          "id": 1,
+          "name": "Mommy's Credit Card",
+          "description": "Well it's free for me!",
+          "effect": "An opponent discards and you draw",
+          "slot": "-",
+          "type": "instant"
+
+        }
+]

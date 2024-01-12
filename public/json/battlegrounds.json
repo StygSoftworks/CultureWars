@@ -117,6 +117,14 @@
             "type": "Health and Wellness",
             "description": "Contentious controversies related to healthcare policies, access, and debates over healthcare reform.",
             "effects": ""
+        },
+
+        {
+            "id": 18,
+            "name": "Meth Barrens of New Jersey",
+            "type": "Health and Wellness",
+            "description": "a place as barren as the souls of the people who live there",
+            "effects": "always roll 3 dice and choose the middle result"
         }
     
     

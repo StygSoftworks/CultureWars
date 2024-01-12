@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownSection, DropdownItem, Button } from "@nextui-org/react";
 import avatars from '../public/json/avatars.json'; // Direct import
+import { FaHome, FaBattleNet, FaGamepad, FaBook, FaInfo, FaUserAstronaut } from 'react-icons/fa'; // Example icons
 
 const NavigationLink = ({ path }) => {
   const displayName = path.substring(1, 2).toUpperCase() + path.substring(2);
@@ -58,6 +59,9 @@ const Layout = ({ children }) => {
             <li className="mr-5"><AvatarDropdown /></li>
             <li className="mr-5">
               <Link href="/battlegrounds/battlegrounds">Battlegrounds</Link>
+            </li>
+            <li className="mr-5">
+              <Link href="/bonus/bonus">Bonus</Link>
             </li>
           </ul>
         </div>
